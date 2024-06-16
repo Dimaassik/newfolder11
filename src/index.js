@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Login from './component/Login';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <h1>aboba</h1>
-    <Login />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
-
 
 reportWebVitals();
