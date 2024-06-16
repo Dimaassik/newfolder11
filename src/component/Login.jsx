@@ -4,7 +4,7 @@ const Login = () => {
     return (
         <>
             <section className="flex justify-center">
-                <div className="flex justify-center flex-col border-2 border-violet-600 rounded-xl bg-violet-100 fixed p-6">
+                <div className="flex justify-center flex-col border-2 border-violet-600 rounded-xl bg-violet-100 fixed p-6 shadow-xl">
                     <div className="flex justify-between items-center">
                         <h1 className="auth-text">Ім'я</h1>
                         <button className="text-right px-2 m-2 text-black bg-white rounded-md text-md font-confortaa">x</button>
