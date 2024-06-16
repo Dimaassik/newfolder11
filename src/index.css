@@ -4,3 +4,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .input1 {
+      @apply hover:ring-violet-mid m-2  hover:ring-2 rounded-sm 
+    }
+    .auth-text{
+      @apply font-confortaa text-left ml-2 text-violet-dark text-xl
+    }
+    .datainput{ 
+      @apply ring-gray-300 ring-2 rounded-sm  hover:ring-violet-light m-2 w-96
+    }
+    .datatext{
+      @apply py-2
+    }
+    .divrow{
+      @apply flex flex-row justify-between items-center
+    }
+    .tdt{
+      @apply p-2 pl-5 border-y-2 border-grays-light
+    }
+
+}
