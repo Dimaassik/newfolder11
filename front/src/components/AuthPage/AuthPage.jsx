@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "../NavBar/NavBar";
-import "./AuthPage.css";
+
 
 const AuthPage = () => {
   const [firstName, setFirstName] = useState("");
