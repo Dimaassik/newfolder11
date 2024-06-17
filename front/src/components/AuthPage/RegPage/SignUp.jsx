@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import NavBar from "../../NavBar/NavBar";
 import axios from "axios";
 
@@ -12,17 +12,12 @@ const SignUpPage = () => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      console.log("Passwords do not match");
-      return;
-    }
-    axios
-      .post("http://localhost:3001/users", { firstName, lastName, password })
-      .then((result) => {
+    axios.post('http://localhost:3001/auth', { firstName, lastName, password })
+      .then(result => {
         console.log(result.data);
-        navigate("/");
+        navigate('/');
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   };
 
   return (
@@ -36,33 +31,36 @@ const SignUpPage = () => {
             className="input1 mb-4 p-2 border border-gray-300 rounded-md"
             placeholder="Ім'я"
             value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}/>
+            onChange={(e) => setFirstName(e.target.value)} />
           <h1 className="auth-text">Прізвище</h1>
           <input
             type="text"
             className="input1 mb-4 p-2 border border-gray-300 rounded-md"
             placeholder="Прізвище"
             value={lastName}
-            onChange={(e) => setLastName(e.target.value)}/>
+            onChange={(e) => setLastName(e.target.value)} />
           <h1 className="auth-text">Пароль</h1>
           <input
             type="password"
             className="input1 mb-4 p-2 border border-gray-300 rounded-md"
             placeholder="Пароль"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}/>
+            onChange={(e) => setPassword(e.target.value)} />
           <h1 className="auth-text">Повторіть пароль</h1>
           <input
             type="password"
             className="input1 mb-4 p-2 border border-gray-300 rounded-md"
             placeholder="Повторіть пароль"
             value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}/>
+            onChange={(e) => setConfirmPassword(e.target.value)} />
           <button
             className="mb-5 auth-text bg-violet-600 p-2 m-2 rounded-md text-violet-100"
             onClick={handleSignUp}>
             Зареєструватися
           </button>
+          <Link to="/login" className="text-center px-2 m-2 text-black bg-white rounded-md text-md font-confortaa">
+            Маю аккаунт
+          </Link>
         </div>
       </section>
     </>
