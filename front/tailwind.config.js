@@ -23,7 +23,8 @@ module.exports = {
       },
     fontFamily:{
       confortaa:['Comfortaa','sans-serif'],
-      bitter:['Bitter','sans-serif']
+      bitter:['Bitter','sans-serif'],
+      PressStart2P:['PressStart2P','sans-serif'],
     }
   },
   plugins: [],
