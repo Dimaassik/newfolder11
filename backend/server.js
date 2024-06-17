@@ -9,7 +9,7 @@ app.use(express.json());
 app.post('/auth', (req, res) => {
     const { firstName, lastName, password } = req.body;
 
-    if (firstName) {
+    if (!firstName) {
         return res.json({ message: "Insufficient data provided" });
     }
     return res.json({ 
