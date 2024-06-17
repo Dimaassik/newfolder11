@@ -29,7 +29,7 @@ const SignUpPage = () => {
     <>
       <NavBar />
       <section className="flex justify-center mt-2">
-        <div className="flex justify-center flex-col border-2 border-gray-600 rounded-xl bg-gray-100 fixed p-6 shadow-xl">
+        <div className="authDiv">
           <h1 className="authText">Ім'я</h1>
           <input
             type="text"
@@ -41,7 +41,7 @@ const SignUpPage = () => {
           <input
             type="email"
             className="authInput"
-            placeholder="Прізвище"
+            placeholder="E-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)} />
           <h1 className="authText">Пароль</h1>
@@ -63,7 +63,7 @@ const SignUpPage = () => {
             onClick={handleSignUp}>
             Зареєструватися
           </button>
-          <Link to="/login" className="authText text-center">
+          <Link to="/login" className="button text-center ">
             Маю аккаунт
           </Link>
         </div>
