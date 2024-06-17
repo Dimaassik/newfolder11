@@ -1,3 +1,6 @@
-backend/db.json
+
 backend/node_modules
 front/node_modules
+backend/db.json
+node_modules
+db.json
