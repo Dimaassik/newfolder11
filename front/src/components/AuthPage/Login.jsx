@@ -4,14 +4,14 @@ import NavBar from "../NavBar/NavBar";
 import axios from "axios";
 
 const LoginPage = () => {
-  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:3001/login', { firstName, password })
+      .post('http://localhost:3001/login', { email, password })
       .then((response) => {
         console.log("response:", response.data);
         navigate("/");
@@ -27,28 +27,21 @@ const LoginPage = () => {
       <NavBar />
       <section className="flex justify-center mt-2">
         <div className="authDiv">
-          <h1 className="authText">Ім'я</h1>
+          <h1 className="authText">E-mail</h1>
           <input
-            type="text"
+            type="email"
             className="authInput"
-            placeholder="Ім'я"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
+            placeholder="E-mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} />
           <h1 className="authText">Пароль</h1>
           <input
             type="password"
             className="authInput"
             placeholder="Пароль"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button
-            className="button"
-            onClick={handleLogin}
-          >
-            Увійти
-          </button>
+            onChange={(e) => setPassword(e.target.value)}/>
+          <button className="button" onClick={handleLogin}>Увійти</button>
         </div>
       </section>
     </>

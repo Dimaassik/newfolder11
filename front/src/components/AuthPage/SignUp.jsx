@@ -58,14 +58,8 @@ const SignUpPage = () => {
             placeholder="Повторіть пароль"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)} />
-          <button
-            className="button"
-            onClick={handleSignUp}>
-            Зареєструватися
-          </button>
-          <Link to="/login" className="button text-center ">
-            Маю аккаунт
-          </Link>
+          <button className="button" onClick={handleSignUp}>Зареєструватися</button>
+          <Link to="/login" className="button text-center ">Маю аккаунт</Link>
         </div>
       </section>
     </>
