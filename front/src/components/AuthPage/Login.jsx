@@ -11,16 +11,15 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .get(`http://localhost:3001/users?firstName=${firstName}&password=${password}`)
-      .then((result) => {
-        if (result.data.length > 0) {
-          console.log("Login successful");
-          navigate("/");
-        } else {
-          console.log("Invalid credentials");
-        }
+      .post('http://localhost:3001/login', { firstName, password })
+      .then((response) => {
+        console.log("response:", response.data);
+        navigate("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log("Error:", err.response.data.message);
+        alert("Неправильні дані для входу");
+      });
   };
 
   return (
@@ -34,17 +33,20 @@ const LoginPage = () => {
             className="authInput"
             placeholder="Ім'я"
             value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}/>
+            onChange={(e) => setFirstName(e.target.value)}
+          />
           <h1 className="authText">Пароль</h1>
           <input
             type="password"
             className="authInput"
             placeholder="Пароль"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}/>
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <button
             className="mb-5 auth-text bg-violet-600 p-2 m-2 rounded-md text-violet-100"
-            onClick={handleLogin}>
+            onClick={handleLogin}
+          >
             Увійти
           </button>
         </div>
