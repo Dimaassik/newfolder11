@@ -6,7 +6,7 @@ function NavBar() {
     const navigate = useNavigate();
 
     const handleAuthRedirect = () => {
-        navigate('/auth');
+        navigate('/signup');
     };
 
     return (
