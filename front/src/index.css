@@ -6,11 +6,11 @@
 @import "tailwindcss/utilities";
 
 @layer components {
-    .input1 {
-      @apply hover:ring-violet-mid m-2  hover:ring-2 rounded-sm 
+    .authInput {
+      @apply hover:ring-violet-mid m-2  hover:ring-2 rounded-sm mb-4 p-2 border border-gray-300 rounded-md
     }
-    .auth-text{
-      @apply font-confortaa text-left ml-2 text-violet-dark text-xl
+    .authText{
+      @apply font-bitter text-left ml-2 text-black text-xl
     }
     .datainput{ 
       @apply ring-gray-300 ring-2 rounded-sm  hover:ring-violet-light m-2 w-96

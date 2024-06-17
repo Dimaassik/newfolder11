@@ -27,42 +27,42 @@ const SignUpPage = () => {
   return (
     <>
       <NavBar />
-      <section className="flex justify-center">
+      <section className="flex justify-center mt-2">
         <div className="flex justify-center flex-col border-2 border-violet-600 rounded-xl bg-violet-100 fixed p-6 shadow-xl">
-          <h1 className="auth-text">Ім'я</h1>
+          <h1 className="authText">Ім'я</h1>
           <input
             type="text"
-            className="input1 mb-4 p-2 border border-gray-300 rounded-md"
+            className="authInput"
             placeholder="Ім'я"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)} />
-          <h1 className="auth-text">E-mail</h1>
+          <h1 className="authText">E-mail</h1>
           <input
             type="email"
-            className="input1 mb-4 p-2 border border-gray-300 rounded-md"
+            className="authInput"
             placeholder="Прізвище"
             value={email}
             onChange={(e) => setEmail(e.target.value)} />
-          <h1 className="auth-text">Пароль</h1>
+          <h1 className="authText">Пароль</h1>
           <input
             type="password"
-            className="input1 mb-4 p-2 border border-gray-300 rounded-md"
+            className="authInput"
             placeholder="Пароль"
             value={password}
             onChange={(e) => setPassword(e.target.value)} />
-          <h1 className="auth-text">Повторіть пароль</h1>
+          <h1 className="authText">Повторіть пароль</h1>
           <input
             type="password"
-            className="input1 mb-4 p-2 border border-gray-300 rounded-md"
+            className="authInput mb-0"
             placeholder="Повторіть пароль"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)} />
           <button
-            className="mb-5 auth-text bg-violet-600 p-2 m-2 rounded-md text-violet-100"
+            className="mb-5 authText bg-violet-600 p-2 m-2 rounded-md text-violet-100"
             onClick={handleSignUp}>
             Зареєструватися
           </button>
-          <Link to="/login" className="text-center px-2 m-2 text-black bg-white rounded-md text-md font-confortaa">
+          <Link to="/login" className="authText text-center">
             Маю аккаунт
           </Link>
         </div>
