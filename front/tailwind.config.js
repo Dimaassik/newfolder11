@@ -20,6 +20,7 @@ module.exports = {
     fontFamily:{
       confortaa:['Comfortaa','sans-serif'],
       bitter:['Bitter','sans-serif'],
+      yesevaOne:['Yeseva+One',' serif'],
     }
   },
   plugins: [],
