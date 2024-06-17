@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "../NavBar/NavBar";
-
+import axios from "axios";
 
 const AuthPage = () => {
   const [firstName, setFirstName] = useState("");
@@ -11,15 +11,17 @@ const AuthPage = () => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-
-    const userData = {
-      firstName,
-      lastName,
-      password,
-    };
-
-    localStorage.setItem("userData", JSON.stringify(userData));
-    console.log("Registration successful:", userData);
+    axios.post('http://localhost:3001/auth', { firstName, lastName, password })
+      .then(result => {
+        console.log(result.data);
+        // setUser({ 
+        //   name: result.data.name,
+        //   surname: result.data.surName,
+        //   password: result.data.password});
+      })
+      .catch(err => console.log(err));
+    // localStorage.setItem("userData", JSON.stringify(userData));
+    // console.log("Registration successful:", userData);
   };
 
   const handleLogin = (e) => {
@@ -58,7 +60,7 @@ const AuthPage = () => {
             className="input1 mb-4 p-2 border border-gray-300 rounded-md"
             placeholder="Ім'я"
             value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}/>
+            onChange={(e) => setFirstName(e.target.value)} />
           {!isLogin && (
             <>
               <h1 className="auth-text">Прізвище</h1>
@@ -67,7 +69,7 @@ const AuthPage = () => {
                 className="input1 mb-4 p-2 border border-gray-300 rounded-md"
                 placeholder="Прізвище"
                 value={lastName}
-                onChange={(e) => setLastName(e.target.value)}/>
+                onChange={(e) => setLastName(e.target.value)} />
             </>
           )}
           <h1 className="auth-text">Пароль</h1>
@@ -76,7 +78,7 @@ const AuthPage = () => {
             className="input1 mb-4 p-2 border border-gray-300 rounded-md"
             placeholder="Пароль"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}/>
+            onChange={(e) => setPassword(e.target.value)} />
           {!isLogin && (
             <>
               <h1 className="auth-text">Повторіть пароль</h1>
@@ -85,7 +87,7 @@ const AuthPage = () => {
                 className="input1 mb-4 p-2 border border-gray-300 rounded-md"
                 placeholder="Повторіть пароль"
                 value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}/>
+                onChange={(e) => setConfirmPassword(e.target.value)} />
             </>
           )}
           <button
