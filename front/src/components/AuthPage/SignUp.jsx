@@ -59,7 +59,7 @@ const SignUpPage = () => {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)} />
           <button
-            className="mb-5 authText bg-violet-600 p-2 m-2 rounded-md text-violet-100"
+            className="mb-5 bg-violet-600 p-2 m-2 rounded-md text-violet-100"
             onClick={handleSignUp}>
             Зареєструватися
           </button>

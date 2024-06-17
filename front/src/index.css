@@ -8,16 +8,10 @@
 
 @layer components {
     .authInput {
-      @apply hover:ring-violet-mid m-2  hover:ring-2 rounded-sm mb-4 p-2 border border-gray-300 rounded-md
+      @apply hover:border-black m-2 rounded-sm mb-4 p-2 border border-gray-300 rounded-md w-96 h-8
     }
     .authText{
       @apply font-bitter text-left ml-2 text-black text-xl
-    }
-    .datainput{ 
-      @apply ring-gray-300 ring-2 rounded-sm  hover:ring-violet-light m-2 w-96
-    }
-    .datatext{
-      @apply py-2
     }
     .divrow{
       @apply flex flex-row justify-between items-center

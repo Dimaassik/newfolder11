@@ -8,10 +8,6 @@ module.exports = {
   theme: {
     extend: {},
     colors:{
-      'violet':{
-      'light':"#a6b3f7",
-      'mid':"#8e59d4",
-      'dark':'#371269'},
       'light.blue':"#181ec7",
       'grays':{
         'light':"#e3e3e3",
@@ -20,6 +16,7 @@ module.exports = {
       gray: colors.gray,
       black: colors.black,
       white: colors.white,
+      violet: colors.violet
       },
     fontFamily:{
       confortaa:['Comfortaa','sans-serif'],
