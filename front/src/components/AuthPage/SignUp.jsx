@@ -12,16 +12,17 @@ const SignUpPage = () => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-    if(password!=confirmPassword){
-      console.log("брєдік не пишем");
-      return;
-    }
-    axios.post('http://localhost:3001/users', { firstName, email, password })
+    if ((firstName && email && password)&&(password==confirmPassword)){
+      axios.post('http://localhost:3001/users', { firstName, email, password })
       .then(result => {
         console.log(result.data);
         navigate('/');
       })
       .catch(err => console.log(err));
+    }else {
+      console.log("брєдік не пишем");
+        return;
+    }
   };
 
   return (

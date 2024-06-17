@@ -24,7 +24,7 @@ module.exports = {
     fontFamily:{
       confortaa:['Comfortaa','sans-serif'],
       bitter:['Bitter','sans-serif'],
-      PressStart2P:['PressStart2P','sans-serif'],
+      'press-start': ['Press Start 2P', 'sans-serif'],
     }
   },
   plugins: [],
