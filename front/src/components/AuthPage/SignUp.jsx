@@ -29,7 +29,7 @@ const SignUpPage = () => {
     <>
       <NavBar />
       <section className="flex justify-center mt-2">
-        <div className="flex justify-center flex-col border-2 border-violet-600 rounded-xl bg-violet-100 fixed p-6 shadow-xl">
+        <div className="flex justify-center flex-col border-2 border-gray-600 rounded-xl bg-gray-100 fixed p-6 shadow-xl">
           <h1 className="authText">Ім'я</h1>
           <input
             type="text"
@@ -59,7 +59,7 @@ const SignUpPage = () => {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)} />
           <button
-            className="mb-5 bg-violet-600 p-2 m-2 rounded-md text-violet-100"
+            className="button"
             onClick={handleSignUp}>
             Зареєструватися
           </button>

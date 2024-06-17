@@ -13,6 +13,9 @@
     .authText{
       @apply font-bitter text-left ml-2 text-black text-xl
     }
+    .button{
+      @apply mb-5 bg-gray-600 p-2 m-2 rounded-md text-gray-100
+    }
     .divrow{
       @apply flex flex-row justify-between items-center
     }
