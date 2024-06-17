@@ -10,6 +10,16 @@
       "firstName": "12",
       "email": "12",
       "password": "32"
+    },
+    {
+      "firstName": "aboba",
+      "email": "aboba@gmail.com",
+      "password": "12345"
+    },
+    {
+      "firstName": "123",
+      "email": "1231@aboba.com",
+      "password": "123"
     }
   ]
 }

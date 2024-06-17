@@ -1,19 +1,28 @@
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import NavBar from "../NavBar/NavBar";
-import axios from "axios";
+import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import NavBar from '../NavBar/NavBar';
+import axios from 'axios';
 
-const SignUpPage = () => {
-  const [firstName, setFirstName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+const SignUpPage: React.FC = () => {
+  const [firstName, setFirstName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [confirmPassword, setConfirmPassword] = useState<string>('');
   const navigate = useNavigate();
 
-  const handleSignUp = (e) => {
+  const validateEmail = (email: string): boolean => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const handleSignUp = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (!firstName || !email || !password || password !== confirmPassword) {
       alert("Будь ласка, заповніть всі поля та переконайтеся, що паролі співпадають.");
+      return;
+    }
+    if (!validateEmail(email)) {
+      alert("Будь ласка, введіть правильний email.");
       return;
     }
     

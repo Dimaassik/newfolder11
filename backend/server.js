@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 
 const jsonServerRouter = jsonServer.router(path.join(__dirname, 'db.json'));
 
-// Логін
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
   const user = jsonServerRouter.db.get('users').find({ email, password }).value();
@@ -24,7 +23,6 @@ app.post('/login', (req, res) => {
   }
 });
 
-// Реєстрація
 app.post('/signup', (req, res) => {
   const { firstName, email, password } = req.body;
 
