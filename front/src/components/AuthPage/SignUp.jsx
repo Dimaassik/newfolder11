@@ -12,7 +12,7 @@ const SignUpPage = () => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3001/auth', { firstName, lastName, password })
+    axios.post('http://localhost:3001/users', { firstName, lastName, password })
       .then(result => {
         console.log(result.data);
         navigate('/');
