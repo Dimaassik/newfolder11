@@ -5,7 +5,7 @@ import axios from "axios";
 
 const SignUpPage = () => {
   const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const SignUpPage = () => {
       console.log("брєдік не пишем");
       return;
     }
-    axios.post('http://localhost:3001/users', { firstName, lastName, password })
+    axios.post('http://localhost:3001/users', { firstName, email, password })
       .then(result => {
         console.log(result.data);
         navigate('/');
@@ -36,13 +36,13 @@ const SignUpPage = () => {
             placeholder="Ім'я"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)} />
-          <h1 className="auth-text">Прізвище</h1>
+          <h1 className="auth-text">E-mail</h1>
           <input
-            type="text"
+            type="email"
             className="input1 mb-4 p-2 border border-gray-300 rounded-md"
             placeholder="Прізвище"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)} />
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} />
           <h1 className="auth-text">Пароль</h1>
           <input
             type="password"
