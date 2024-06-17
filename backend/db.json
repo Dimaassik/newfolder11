@@ -20,6 +20,11 @@
       "firstName": "123",
       "email": "1231@aboba.com",
       "password": "123"
+    },
+    {
+      "firstName": "123",
+      "email": "123@gmail.com",
+      "password": "123"
     }
   ]
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import axios from 'axios';
+import { useUser } from '../../UserContext';
 
 const SignUpPage: React.FC = () => {
   const [firstName, setFirstName] = useState<string>('');
@@ -9,6 +10,7 @@ const SignUpPage: React.FC = () => {
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
   const navigate = useNavigate();
+  const { login } = useUser();
 
   const validateEmail = (email: string): boolean => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -29,6 +31,7 @@ const SignUpPage: React.FC = () => {
     axios.post('http://localhost:3001/signup', { firstName, email, password })
       .then(result => {
         console.log(result.data);
+        login({ email }); // Save user in context
         navigate('/');
       })
       .catch(err => {
