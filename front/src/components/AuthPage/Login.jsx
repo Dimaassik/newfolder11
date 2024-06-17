@@ -17,8 +17,8 @@ const LoginPage = () => {
         navigate("/");
       })
       .catch((err) => {
-        console.log("Error:", err.response.data.message);
-        alert("Неправильні дані для входу");
+        console.log("Error:", err.response?.data?.message || 'Невідома помилка');
+        alert(err.response?.data?.message || "Неправильні дані для входу");
       });
   };
 
@@ -40,7 +40,7 @@ const LoginPage = () => {
             className="authInput"
             placeholder="Пароль"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}/>
+            onChange={(e) => setPassword(e.target.value)} />
           <button className="button" onClick={handleLogin}>Увійти</button>
         </div>
       </section>

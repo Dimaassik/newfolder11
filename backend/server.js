@@ -12,16 +12,32 @@ app.use(bodyParser.json());
 
 const jsonServerRouter = jsonServer.router(path.join(__dirname, 'db.json'));
 
+// Логін
 app.post('/login', (req, res) => {
-  const { firstName, password } = req.body;
-
-  const user = jsonServerRouter.db.get('users').find({ firstName, password }).value();
+  const { email, password } = req.body;
+  const user = jsonServerRouter.db.get('users').find({ email, password }).value();
 
   if (user) {
     res.json(user);
   } else {
     res.status(401).json({ message: 'Неправильні дані для входу' });
   }
+});
+
+// Реєстрація
+app.post('/signup', (req, res) => {
+  const { firstName, email, password } = req.body;
+
+  const existingUser = jsonServerRouter.db.get('users').find({ email }).value();
+  if (existingUser) {
+    res.status(409).json({ message: 'Користувач з таким email вже існує' });
+    return;
+  }
+
+  const newUser = { firstName, email, password };
+  jsonServerRouter.db.get('users').push(newUser).write();
+
+  res.status(201).json(newUser);
 });
 
 app.use('/', jsonServerRouter);

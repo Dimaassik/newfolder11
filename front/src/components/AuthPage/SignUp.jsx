@@ -12,17 +12,24 @@ const SignUpPage = () => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-    if ((firstName && email && password)&&(password==confirmPassword)){
-      axios.post('http://localhost:3001/users', { firstName, email, password })
+    if (!firstName || !email || !password || password !== confirmPassword) {
+      alert("Будь ласка, заповніть всі поля та переконайтеся, що паролі співпадають.");
+      return;
+    }
+    
+    axios.post('http://localhost:3001/signup', { firstName, email, password })
       .then(result => {
         console.log(result.data);
         navigate('/');
       })
-      .catch(err => console.log(err));
-    }else {
-      console.log("брєдік не пишем");
-        return;
-    }
+      .catch(err => {
+        if (err.response && err.response.status === 409) {
+          alert("Користувач з таким email вже існує.");
+        } else {
+          console.log(err);
+          alert("Сталася помилка під час реєстрації.");
+        }
+      });
   };
 
   return (
@@ -59,7 +66,7 @@ const SignUpPage = () => {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)} />
           <button className="button" onClick={handleSignUp}>Зареєструватися</button>
-          <Link to="/login" className="button text-center ">Маю аккаунт</Link>
+          <Link to="/login" className="button text-center">Маю аккаунт</Link>
         </div>
       </section>
     </>
