@@ -17,7 +17,7 @@
       @apply flex justify-center flex-col border-2 border-gray-600 rounded-xl bg-gray-100 fixed p-6 shadow-xl
     }
     .button{
-      @apply mb-5 bg-gray-600 p-2 m-2 rounded-md text-gray-100
+      @apply bg-gray-600 p-2 m-2 rounded-md text-gray-100
     }
     .divrow{
       @apply flex flex-row justify-between items-center

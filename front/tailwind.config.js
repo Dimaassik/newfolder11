@@ -16,12 +16,10 @@ module.exports = {
       gray: colors.gray,
       black: colors.black,
       white: colors.white,
-      violet: colors.violet
       },
     fontFamily:{
       confortaa:['Comfortaa','sans-serif'],
       bitter:['Bitter','sans-serif'],
-      'press-start': ['Press Start 2P', 'sans-serif'],
     }
   },
   plugins: [],
