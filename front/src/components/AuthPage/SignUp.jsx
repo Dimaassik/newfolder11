@@ -58,20 +58,8 @@ const SignUpPage = () => {
             placeholder="Повторіть пароль"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)} />
-<<<<<<< HEAD
           <button className="button" onClick={handleSignUp}>Зареєструватися</button>
           <Link to="/login" className="button text-center ">Маю аккаунт</Link>
-=======
-            <button
-              className="button"
-              onClick={handleSignUp}>
-              Зареєструватися
-            </button>
-            <Link to="/login" className="button text-center ">
-              Маю аккаунт
-            </Link>
-
->>>>>>> e2a02e44 ( Your branch is up to date with 'origin/main'.)
         </div>
       </section>
     </>
