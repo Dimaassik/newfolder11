@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
       {user ? (
         <button className="button py-2" onClick={handleLogout}>Logout</button>
       ) : (
-        <button className="button my-1 px-3" onClick={handleAuthRedirect}>Login/SignUp</button>
+        <button className="button my-1 px-3 bg-[#202020]" onClick={handleAuthRedirect}>Login/SignUp</button>
       )}
     </nav>
     <nav className="flex bg-grays-dark justify-center items-center flex-wrap">

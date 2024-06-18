@@ -51,7 +51,7 @@ const SignUpPage: React.FC = () => {
     <>
       <NavBar />
       <section className="flex justify-center mt-2">
-        <div className="authDiv">
+        <div className="authDiv bg-[#e0e0e0]">
           <h1 className="authText">Ім'я</h1>
           <input
             type="text"

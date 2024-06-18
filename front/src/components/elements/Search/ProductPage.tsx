@@ -2,13 +2,14 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import keyboards from '../../../data/keyboards';
 import mice from '../../../data/mice';
+import monitors from '../../../data/monitors';
 
 interface Product {
     id: number;
     category: string;
     title: string;
     price: string;
-    images: string[];
+    img: string;
 }
 
 const ProductPage: React.FC = () => {
@@ -22,13 +23,15 @@ const ProductPage: React.FC = () => {
     };
 
     let product: Product | undefined;
-    if (category && productName) { // Додано перевірку, чи category і productName визначені
-        if (category.toLowerCase() === 'keyboards') {
-            product = findProduct(keyboards, productName);
-        } else if (category.toLowerCase() === 'mice') {
-            product = findProduct(mice, productName);
+        if (category && productName) {
+            if (category.toLowerCase() === 'keyboards') {
+                product = findProduct(keyboards, productName);
+            } else if (category.toLowerCase() === 'mice') {
+                product = findProduct(mice, productName);
+            } else if (category.toLowerCase() === 'monitors') {
+                product = findProduct(monitors, productName);
+            }
         }
-    }
 
     if (!product) {
         return <div>Product not found</div>;
@@ -39,7 +42,7 @@ const ProductPage: React.FC = () => {
             <h2>{product.title}</h2>
             <p>Category: {product.category}</p>
             <p>Price: {product.price}</p>
-            <img src={product.images[0]} alt={product.title} />
+            <img src={product.img[0]} alt={product.title} />
         </div>
     );
 };

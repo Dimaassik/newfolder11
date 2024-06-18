@@ -2,17 +2,27 @@ const keyboards = [
     {
         id: 1,
         category: "Keyboards",
-        title: "Keyboard 1",
-        price: "$350",
-        images: ["assets/keyboard1.webp"],
+        title: "Keychron C1 RGB Backlit Gateron",
+        description: "Mechanical keyboard with RGB lighting and customizable keys.",
+        price: "$150",
+        img: "assets/keyboard1.png"
     },
     {
         id: 2,
         category: "Keyboards",
-        title: "Keyboard 2",
-        price: "$300",
-        images: ["assets/keyboard2.jpg"],
+        title: "Akko SpongeBob 3098S CS Sponge Switch",
+        description: "Wireless keyboard with ergonomic design and long battery life.",
+        price: "$100",
+        img: "assets/keyboard2.png"
     },
+    {
+        id: 3,
+        category: "Keyboards",
+        title: "Varmilo VEM87 Koi EC",
+        description: "Compact keyboard with silent keys and sleek design.",
+        price: "$180",
+        img: "assets/keyboard3.png"
+    }
 ];
 
 export default keyboards;
