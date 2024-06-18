@@ -19,10 +19,10 @@ module.exports = {
       red: colors.red,
          },
     fontFamily:{
-      confortaa:['Comfortaa','sans-serif'],
-      bitter:['Bitter','sans-serif'],
-      yesevaOne:['Yeseva+One',' sans-serif'],
-      shantellSans:['Shantell+Sans','sans-serif'],
+      comfortaa: ['Comfortaa', 'sans-serif'],
+      bitter: ['Bitter', 'sans-serif'],
+      pressstart: ['Press Start 2P', 'serif'],
+      yeseva: ['Yeseva One', 'sans-serif'],
     }
   },
   plugins: [],

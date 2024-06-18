@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import axios from 'axios';
 import { useUser } from '../UserContext';
-import { getElementError } from '@testing-library/react';
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState<string>('');

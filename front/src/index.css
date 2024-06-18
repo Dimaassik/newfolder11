@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Yeseva+One&display=swap');
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -16,13 +15,13 @@
       @apply hover:border-black m-2 rounded-sm mb-4 p-2 border rounded-md w-96 h-8 border-red-600 bg-red-50
     }
     .authText{
-      @apply font-yesevaOne text-left ml-2 text-black text-xl
+      @apply font-bitter text-left ml-2 text-black text-xl
     }
     .authDiv{
       @apply flex justify-center flex-col border-2 border-gray-600 rounded-xl bg-gray-100 fixed py-6 px-4 shadow-xl
     }
     .button{
-      @apply font-yesevaOne bg-gray-600 p-2 m-2 rounded-md text-gray-100 hover:bg-gray-500
+      @apply font-yeseva bg-gray-600 p-2 m-2 rounded-md text-gray-100 hover:bg-gray-500
     }
     .divrow{
       @apply flex flex-row justify-between items-center
