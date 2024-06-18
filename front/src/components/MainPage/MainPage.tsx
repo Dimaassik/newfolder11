@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
-import { popularDevices } from '../../data/data';
+import { popular_devices } from "../../data/popular_devices";
 
 const MainPage: React.FC = () => {
 
@@ -9,14 +9,15 @@ const MainPage: React.FC = () => {
             <NavBar />
             <section className='divrow'>
                 <div>
-                <img alt='Головне фото'></img>
+                    <img alt='Головне фото' />
                 </div>
                 <div className='flex flex-col'>
-                {popularDevices.map((item) =>(
-                <div>
-                    <p><img alt={item.text} src={item.img} />{item.text}</p>
-                </div>
-          ))}
+                    {popular_devices.map((item) => (
+                        <div key={item.id}>
+                            <img src={item.images[0]} alt={item.title} />
+                            <p>{item.title}</p>
+                        </div>
+                    ))}
                 </div>
             </section>
         </div>
