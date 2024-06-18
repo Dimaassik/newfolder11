@@ -34,7 +34,7 @@ const SignUpPage: React.FC = () => {
     axios.post('http://localhost:3001/signup', { firstName, email, password })
       .then(result => {
         console.log(result.data);
-        login({ email }); // Save user in context
+        login({ email });
         navigate('/');
       })
       .catch(err => {

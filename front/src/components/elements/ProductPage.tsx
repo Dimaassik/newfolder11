@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import keyboards from '../../../data/keyboards';
-import mice from '../../../data/mice';
-import monitors from '../../../data/monitors';
+import keyboards from '../../data/keyboards';
+import mice from '../../data/mice';
+import monitors from '../../data/monitors';
 
 interface Product {
     id: number;
