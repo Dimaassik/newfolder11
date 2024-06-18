@@ -17,7 +17,7 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       red: colors.red,
-         },
+    },
     fontFamily:{
       comfortaa: ['Comfortaa', 'sans-serif'],
       bitter: ['Bitter', 'sans-serif'],

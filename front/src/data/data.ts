@@ -24,3 +24,22 @@ export const category = [
         link: "/category/phones",
     }
 ];
+export const popularDevices = [
+    {
+        img: "assets/monitor1.jpg",
+        text: "SAMSUNG",
+    },
+    {
+        img: "assets/monitor2.jpg",
+        text: "MSI CURVED",
+    },    {
+        img: "assets/monitor3.jpg",
+        text: "TUF GAMING",
+    },    {
+        img: "assets/monitor4.jpg",
+        text: "ACER 27",
+    },    {
+        img: "assets/monitor5.jpg",
+        text: "SAMSUNG Odyssey G5",
+    },
+];

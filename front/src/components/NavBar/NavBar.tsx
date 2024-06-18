@@ -19,7 +19,7 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-    <nav className="flex justify-between bg-[#333] p-2 pl-3 items-center sticky">
+    <nav className="flex justify-between bg-grays-dark p-2 pl-3 items-center sticky flex-wrap">
       <div className="text-2xl text-white font-bold cursor-pointer" onClick={() => navigate('/')}>MyLogo</div>
       <SearchBar />
       {user ? (
@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
         <button className="button my-1 px-3" onClick={handleAuthRedirect}>Login/SignUp</button>
       )}
     </nav>
-    <nav className="flex bg-[#333] justify-center items-center ">
+    <nav className="flex bg-grays-dark justify-center items-center flex-wrap">
     {category.map((item) =>(
           <Link to={item.link} className="font-yeseva text-white px-2 py-1 text-lg font-confortaa hover:bg-gray-400">{item.text}</Link>
           ))}

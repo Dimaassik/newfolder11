@@ -9,10 +9,10 @@
 
 @layer components {
     .authInput {
-      @apply hover:border-black m-2 rounded-sm mb-4 p-2 border border-gray-300 rounded-md w-96 h-8
+      @apply hover:border-black m-2 mb-4 p-2 border border-gray-300 rounded-md w-96 h-8
     }
     .authInputEr {
-      @apply hover:border-black m-2 rounded-sm mb-4 p-2 border rounded-md w-96 h-8 border-red-600 bg-red-50
+      @apply hover:border-black m-2 mb-4 p-2 border rounded-md w-96 h-8 border-red-600 bg-red-50
     }
     .authText{
       @apply font-bitter text-left ml-2 text-black text-xl

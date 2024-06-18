@@ -2,7 +2,6 @@ import React, { useState, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import keyboards from '../../../data/keyboards';
 import mice from '../../../data/mice';
-import search from '../../../assets/search.png';
 
 interface Product {
     id: number;
@@ -62,7 +61,7 @@ const SearchBar: React.FC = () => {
                     ))}
                 </ul>
             )}
-            <button><img className="h-4 w-4 m-1 cursor-pointer" src={search} alt='search'/></button>
+            <button><img className="h-4 w-4 m-1 cursor-pointer" src="/assets/search.png" alt='search'/></button>
         </div>
     );
 };
