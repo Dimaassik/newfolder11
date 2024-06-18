@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Yeseva+One&display=swap');
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -18,7 +19,7 @@
       @apply flex justify-center flex-col border-2 border-gray-600 rounded-xl bg-gray-100 fixed p-6 shadow-xl
     }
     .button{
-      @apply bg-gray-600 p-2 m-2 rounded-md text-gray-100 hover:bg-gray-500
+      @apply font-yesevaOne bg-gray-600 p-2 m-2 rounded-md text-gray-100 hover:bg-gray-500
     }
     .divrow{
       @apply flex flex-row justify-between items-center

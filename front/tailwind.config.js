@@ -16,11 +16,13 @@ module.exports = {
       gray: colors.gray,
       black: colors.black,
       white: colors.white,
-      },
+      red: colors.red,
+         },
     fontFamily:{
       confortaa:['Comfortaa','sans-serif'],
       bitter:['Bitter','sans-serif'],
-      yesevaOne:['Yeseva+One',' serif'],
+      yesevaOne:['Yeseva+One',' sans-serif'],
+      shantellSans:['Shantell+Sans','sans-serif'],
     }
   },
   plugins: [],

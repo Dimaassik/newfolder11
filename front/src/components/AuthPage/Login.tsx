@@ -30,7 +30,7 @@ const LoginPage: React.FC = () => {
       })
       .catch((err) => {
         console.log("Error:", err.response?.data?.message || 'Невідома помилка');
-        alert(err.response?.data?.message || "Неправильні дані для входу");
+        document.getElementsByClassName("authInput").className = "authInput border-red-500";
       });
   };
 
