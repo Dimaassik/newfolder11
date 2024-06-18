@@ -1,4 +1,4 @@
-export const popular_devices = [
+const monitors = [
     {
         id: 1,
         category: "Monitors",
@@ -14,3 +14,5 @@ export const popular_devices = [
         images: "assets/monitor2.jpg",
     }
 ];
+
+export default monitors;

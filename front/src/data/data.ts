@@ -26,20 +26,20 @@ export const category = [
 ];
 export const popularDevices = [
     {
-        img: "assets/monitor1.jpg",
-        text: "SAMSUNG",
+        img: "assets/monitor1.png",
+        text: "Монітор 23.5' Samsung Curved LS24C366",
     },
     {
-        img: "assets/monitor2.jpg",
-        text: "MSI CURVED",
+        img: "assets/monitor2.png",
+        text: "Монітор 27' MSI Optix G27CQ4 QHD VA Curved",
     },    {
-        img: "assets/monitor3.jpg",
-        text: "TUF GAMING",
+        img: "assets/monitor3.png",
+        text: "Монітор 23.8' Asus VG249QL3A Full HD",
     },    {
-        img: "assets/monitor4.jpg",
-        text: "ACER 27",
+        img: "assets/monitor4.png",
+        text: "Монітор 27' Acer EK271EBI IPS FHD",
     },    {
-        img: "assets/monitor5.jpg",
-        text: "SAMSUNG Odyssey G5",
+        img: "assets/monitor5.png",
+        text: "Монітор 27' Samsung Odyssey AG50 S27AG502NI",
     },
 ];
