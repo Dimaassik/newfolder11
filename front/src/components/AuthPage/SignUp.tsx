@@ -20,11 +20,14 @@ const SignUpPage: React.FC = () => {
   const handleSignUp = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (!firstName || !email || !password || password !== confirmPassword) {
-      alert("Будь ласка, заповніть всі поля та переконайтеся, що паролі співпадають.");
-      return;
+      const inputs = document.querySelectorAll<HTMLInputElement>('input');
+      inputs.forEach(input => {
+          input.className = 'authInput border-red-500';
+      });
     }
     if (!validateEmail(email)) {
-      alert("Будь ласка, введіть правильний email.");
+      const mail = document.getElementById('mail');
+      if(mail) mail.className = 'authInput border-red-500';
       return;
     }
     
@@ -58,6 +61,7 @@ const SignUpPage: React.FC = () => {
             onChange={(e) => setFirstName(e.target.value)} />
           <h1 className="authText">E-mail</h1>
           <input
+            id="mail"
             type="email"
             className="authInput"
             placeholder="E-mail"

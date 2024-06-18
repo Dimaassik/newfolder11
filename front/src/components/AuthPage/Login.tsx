@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import axios from 'axios';
 import { useUser } from '../../UserContext';
+import { getElementError } from '@testing-library/react';
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState<string>('');
@@ -17,9 +18,12 @@ const LoginPage: React.FC = () => {
 
   const handleLogin = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    const mail = document.getElementById('mail');
     if (!validateEmail(email)) {
-      alert("Будь ласка, введіть правильний email.");
+        if(mail) mail.className = 'authInput border-red-500';
       return;
+    }else{
+      if(mail) mail.className = 'authInput';
     }
     axios
       .post('http://localhost:3001/login', { email, password })
@@ -29,7 +33,13 @@ const LoginPage: React.FC = () => {
         navigate("/");
       })
       .catch((err) => {
+        const pswd = document.getElementById('pswd');
+        if (pswd && mail) {
+          pswd.className = 'authInput border-red-500';
+          mail.className = 'authInput border-red-500';
+        }
         console.log("Error:", err.response?.data?.message || 'Невідома помилка');
+
       });
   };
 
@@ -40,6 +50,7 @@ const LoginPage: React.FC = () => {
         <div className="authDiv">
           <h1 className="authText">E-mail</h1>
           <input
+            id='mail'
             type="email"
             className="authInput"
             placeholder="E-mail"
@@ -47,6 +58,7 @@ const LoginPage: React.FC = () => {
             onChange={(e) => setEmail(e.target.value)} />
           <h1 className="authText">Пароль</h1>
           <input
+            id="pswd"
             type="password"
             className="authInput"
             placeholder="Пароль"
