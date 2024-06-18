@@ -15,6 +15,11 @@
       "firstName": "1213",
       "email": "21@d.c",
       "password": "1312"
+    },
+    {
+      "firstName": "root",
+      "email": "root@r.oot",
+      "password": "1"
     }
   ]
 }

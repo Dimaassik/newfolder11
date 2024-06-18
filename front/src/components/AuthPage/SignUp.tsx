@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import axios from 'axios';
-import { useUser } from '../../UserContext';
+import { useUser } from '../UserContext';
 
 const SignUpPage: React.FC = () => {
   const [firstName, setFirstName] = useState<string>('');
@@ -22,12 +22,12 @@ const SignUpPage: React.FC = () => {
     if (!firstName || !email || !password || password !== confirmPassword) {
       const inputs = document.querySelectorAll<HTMLInputElement>('input');
       inputs.forEach(input => {
-          input.className = 'authInput border-red-500';
+          input.className = 'authInputEr';
       });
     }
     if (!validateEmail(email)) {
       const mail = document.getElementById('mail');
-      if(mail) mail.className = 'authInput border-red-500';
+      if(mail) mail.className = 'authInputEr';
       return;
     }
     
@@ -77,7 +77,7 @@ const SignUpPage: React.FC = () => {
           <h1 className="authText">Повторіть пароль</h1>
           <input
             type="password"
-            className="authInput mb-0"
+            className="authInput mb-2"
             placeholder="Повторіть пароль"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)} />

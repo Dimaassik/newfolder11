@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import axios from 'axios';
-import { useUser } from '../../UserContext';
+import { useUser } from '../UserContext';
 import { getElementError } from '@testing-library/react';
 
 const LoginPage: React.FC = () => {
@@ -20,7 +20,7 @@ const LoginPage: React.FC = () => {
     e.preventDefault();
     const mail = document.getElementById('mail');
     if (!validateEmail(email)) {
-        if(mail) mail.className = 'authInput border-red-500';
+        if(mail) mail.className = 'authInputEr';
       return;
     }else{
       if(mail) mail.className = 'authInput';
@@ -35,8 +35,8 @@ const LoginPage: React.FC = () => {
       .catch((err) => {
         const pswd = document.getElementById('pswd');
         if (pswd && mail) {
-          pswd.className = 'authInput border-red-500';
-          mail.className = 'authInput border-red-500';
+          pswd.className = 'authInputEr';
+          mail.className = 'authInputEr';
         }
         console.log("Error:", err.response?.data?.message || 'Невідома помилка');
 
