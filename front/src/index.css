@@ -24,7 +24,7 @@
       @apply font-yeseva bg-gray-600 p-2 m-2 rounded-md text-gray-100 hover:bg-gray-500
     }
     .divrow{
-      @apply flex flex-row justify-between items-center
+      @apply flex flex-row justify-around items-center
     }
     .tdt{
       @apply p-2 pl-5 border-y-2 border-grays-light

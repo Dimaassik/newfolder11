@@ -2,7 +2,7 @@ import React, { useState, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import keyboards from '../../../data/keyboards';
 import mice from '../../../data/mice';
-import { search } from '../../../assets';
+import search from '../../../assets/search.png';
 
 interface Product {
     id: number;
