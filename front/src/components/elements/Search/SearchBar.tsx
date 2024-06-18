@@ -1,7 +1,8 @@
 import React, { useState, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import keyboards from '../../data/keyboards';
-import mice from '../../data/mice';
+import keyboards from '../../../data/keyboards';
+import mice from '../../../data/mice';
+import { search } from '../../../assets';
 
 interface Product {
     id: number;
@@ -44,13 +45,13 @@ const SearchBar: React.FC = () => {
     };
 
     return (
-        <div className="search-bar relative">
+        <div className="search-bar relative bg-white p-2 rounded-xl flex items-center">
             <input
                 type="text"
                 value={searchTerm}
                 onChange={handleSearchChange}
+                className=' rounded-xl border border-grays-light pl-2 text-left font-bitter hover:border-black'
                 placeholder="Пошук"
-                className="rounded rounded-2"
             />
             {filteredProducts.length > 0 && (
                 <ul className="dropdown-menu absolute top-full bg-white shadow-md border border-gray-200 rounded">
@@ -61,6 +62,7 @@ const SearchBar: React.FC = () => {
                     ))}
                 </ul>
             )}
+            <button><img className="h-4 w-4 m-1 cursor-pointer" src={search} alt='search'/></button>
         </div>
     );
 };
