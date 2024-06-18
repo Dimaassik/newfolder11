@@ -1,19 +1,31 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import NavBar from "../NavBar/NavBar";
-import axios from "axios";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import NavBar from '../NavBar/NavBar';
+import axios from 'axios';
+import { useUser } from '../../UserContext';
 
-const LoginPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const LoginPage: React.FC = () => {
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
   const navigate = useNavigate();
+  const { login } = useUser();
 
-  const handleLogin = (e) => {
+  const validateEmail = (email: string): boolean => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const handleLogin = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    if (!validateEmail(email)) {
+      alert("Будь ласка, введіть правильний email.");
+      return;
+    }
     axios
       .post('http://localhost:3001/login', { email, password })
       .then((response) => {
         console.log("response:", response.data);
+        login({ email }); // Save user in context
         navigate("/");
       })
       .catch((err) => {
