@@ -11,6 +11,27 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const jsonServerRouter = jsonServer.router(path.join(__dirname, 'db.json'));
+app.get('/category/:category/:productName', (req, res) => {
+  const { category, productName } = req.params;
+
+  let products = [];
+  if (category === 'keyboards') {
+    products = jsonServerRouter.db.get('keyboards').value();
+  } else if (category === 'mice') {
+    products = jsonServerRouter.db.get('mice').value();
+  }
+
+  const product = products.find(p => {
+    const formattedTitle = p.title.replace(/\s+/g, '-').toLowerCase();
+    return formattedTitle === productName;
+  });
+
+  if (product) {
+    res.json(product);
+  } else {
+    res.status(404).json({ message: 'Product not found' });
+  }
+});
 
 app.post('/login', (req, res) => {
   const { email, password } = req.body;

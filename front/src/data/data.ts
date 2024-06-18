@@ -1,30 +1,26 @@
 export const category = [
     {
         text: "Монітори",
-        link: "/categoty/m1",
+        link: "/category/monitors",
     },
     {
         text: "Миші",
-        link: "/categoty/m31",
+        link: "/category/mice",
     },
     {
         text: "Клавіатури",
-        link: "/categoty/m12",
+        link: "/category/keyboards",
     },
     {
         text: "Мікрофони",
-        link: "/categoty/m14",
+        link: "/category/microphones",
     },
     {
-        text: "Мікрофони",
-        link: "/categoty/m14",
+        text: "Навушники",
+        link: "/category/headphones",
     },
     {
-        text: "Мікрофони",
-        link: "/categoty/m14",
-    },
-    {
-        text: "Мікрофони",
-        link: "/categoty/m14",
-    },
+        text: "Телефони",
+        link: "/category/phones",
+    }
 ];
