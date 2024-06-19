@@ -22,7 +22,8 @@ const mice = [
         description: "Gaming mouse with RGB lighting and programmable buttons.",
         price: "$60",
         img: "assets/mouse3.png"
-    }
+    },
+    
 ];
 
 export default mice;

@@ -19,7 +19,7 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-    <nav className="flex justify-between bg-grays-dark p-2 pl-3 items-center sticky flex-wrap">
+    <nav className="flex justify-between bg-grays-dark p-2 pl-3 items-center flex-wrap">
       <div className="text-2xl text-white font-bold cursor-pointer" onClick={() => navigate('/')}>MyLogo</div>
       <SearchBar />
       {user ? (
