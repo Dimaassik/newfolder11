@@ -31,7 +31,6 @@ const CategoryPage: React.FC = () => {
   };
 
   const products = getProducts();
-
   if (!category) {
     return <div>Category not found</div>;
   }
@@ -45,12 +44,13 @@ const CategoryPage: React.FC = () => {
           {products.map((item) => (
             <div key={item.id} className='product'>
               <Link to={`/category/${category}/${item.title.replace(/\s+/g, '-').toLowerCase()}`}>
-                <img className="mb-2" src={`/${item.img}`} alt={item.title} />
+              
+                <img className="w-[30rem] h-[10rem] object-contain mb-2" src={`/${item.img}`} alt={item.title} />
                 <h4 className='text-lg font-bold'>{item.title}</h4>
                 <p>{item.description}</p>
                 <p className='text-sm text-gray-500'>{item.price}</p>
               </Link>
-            </div>
+              </div>
           ))}
         </div>
       </section>
