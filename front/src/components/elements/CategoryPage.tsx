@@ -4,6 +4,7 @@ import mice from '../../data/mice';
 import keyboards from '../../data/keyboards';
 import monitors from '../../data/monitors';
 import microphones from '../../data/microphones';
+import headphones from '../../data/headphones';
 import NavBar from '../NavBar/NavBar';
 
 const CategoryPage: React.FC = () => {
@@ -19,6 +20,8 @@ const CategoryPage: React.FC = () => {
         return monitors;
       case 'microphones':
         return microphones;
+    case 'headphones':
+        return headphones;
       default:
         return [];
     }

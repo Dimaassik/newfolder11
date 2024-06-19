@@ -5,7 +5,7 @@ const microphones = [
         title: "Blue Yeti USB Microphone",
         description: "High-quality USB microphone for recording and streaming.",
         price: "$120",
-        img: "assets/microphone1.png"
+        img: "assets/phone1.png"
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const microphones = [
         title: "Audio-Technica AT2020",
         description: "Professional XLR microphone with exceptional sound quality.",
         price: "$150",
-        img: "assets/microphone2.png"
+        img: "assets/phone2.png"
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const microphones = [
         title: "Rode NT1-A",
         description: "Studio condenser microphone with wide frequency response.",
         price: "$200",
-        img: "assets/microphone3.png"
+        img: "assets/phone3.png"
     }
 ];
 

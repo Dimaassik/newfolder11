@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import keyboards from '../../data/keyboards';
 import mice from '../../data/mice';
 import monitors from '../../data/monitors';
+import headphones from '../../data/headphones';
+import microphones from '../../data/microphones';
 
 interface Product {
     id: number;
@@ -30,6 +32,10 @@ const ProductPage: React.FC = () => {
                 product = findProduct(mice, productName);
             } else if (category.toLowerCase() === 'monitors') {
                 product = findProduct(monitors, productName);
+            } else if (category.toLowerCase() === 'headphones') {
+                product = findProduct(headphones, productName);
+            } else if (category.toLowerCase() === 'microphones') {
+                product = findProduct(microphones, productName);
             }
         }
 
@@ -38,7 +44,7 @@ const ProductPage: React.FC = () => {
     }
 
     return (
-        <div>
+        <div className='product'>
             <h2>{product.title}</h2>
             <p>Category: {product.category}</p>
             <p>Price: {product.price}</p>

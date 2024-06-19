@@ -1,27 +1,27 @@
 const monitors = [
     {
       id: 1,
-      category: "Monitors",
-      title: "Samsung Curved LS24C366 23.5'",
+      category: "Headphones",
+      title: "Marshall Major IV",
       description: "High-quality monitor with excellent color accuracy and refresh rate.",
       price: "$350",
-      img: "assets/monitor1.png"
+      img: "assets/headphone1.png"
     },
     {
       id: 2,
-      category: "Monitors",
-      title: "MSI Optix G27CQ4 QHD VA Curved 27'",
+      category: "Headphones",
+      title: "Sony WH-1000XM5",
       description: "Affordable monitor with great performance and sleek design.",
       price: "$300",
-      img: "assets/monitor2.png"
+      img: "assets/headphone2.png"
     },
     {
       id: 3,
-      category: "Monitors",
-      title: "Asus VG249QL3A Full HD 23.8'",
+      category: "Headphones",
+      title: "Logitech G Pro X",
       description: "Gaming monitor with high refresh rate and low latency.",
       price: "$400",
-      img: "assets/monitor3.png"
+      img: "assets/headphone3.png"
     }
   ];
   
