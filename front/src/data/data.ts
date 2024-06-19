@@ -1,27 +1,40 @@
+import mice from './mice';
+import keyboards from './keyboards';
+import monitors from './monitors';
+import microphones from './microphones';
+import headphones from './headphones';
+import phones from './phones';
+
 export const category = [
     {
         text: "Монітори",
         link: "/category/monitors",
+        data: monitors,
     },
     {
         text: "Миші",
         link: "/category/mice",
+        data: mice,
     },
     {
         text: "Клавіатури",
         link: "/category/keyboards",
+        data: keyboards,
     },
     {
         text: "Мікрофони",
         link: "/category/microphones",
+        data: microphones,
     },
     {
         text: "Навушники",
         link: "/category/headphones",
+        data: headphones,
     },
     {
         text: "Телефони",
         link: "/category/phones",
+        data: phones,
     }
 ];
 export default category;
