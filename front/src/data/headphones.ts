@@ -3,7 +3,7 @@ const headphones = [
       id: 1,
       category: "Headphones",
       title: "Marshall Major IV",
-      description: "High-quality monitor with excellent color accuracy and refresh rate.",
+      description: "Classic headphones known for their iconic design and rich, balanced sound.",
       price: "$350",
       img: "assets/headphone1.png"
     },
@@ -11,7 +11,7 @@ const headphones = [
       id: 2,
       category: "Headphones",
       title: "Sony WH-1000XM5",
-      description: "Affordable monitor with great performance and sleek design.",
+      description: "Wireless headphones with industry-leading noise cancellation and premium audio quality.",
       price: "$300",
       img: "assets/headphone2.png"
     },
@@ -19,7 +19,7 @@ const headphones = [
       id: 3,
       category: "Headphones",
       title: "Logitech G Pro X",
-      description: "Gaming monitor with high refresh rate and low latency.",
+      description: "Gaming headset engineered for competitive gaming with advanced audio drivers and clear communication.",
       price: "$400",
       img: "assets/headphone3.png"
     }
