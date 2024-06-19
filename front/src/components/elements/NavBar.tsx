@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
           <div className='divrow'>
             <button className="button py-2" onClick={handleLogout}>Logout</button>
             <img src='/assets/cart.png' alt='cart' className='w-12 h-12'/>
-              Cart Items: {cart.items.length}
+              <h1>Cart Items: {cart.id.length}</h1>
             </div>
           </>
         ) : (
