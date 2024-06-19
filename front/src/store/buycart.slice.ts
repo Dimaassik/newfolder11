@@ -6,8 +6,7 @@ interface BuyCartState {
 
 const initialState: BuyCartState = {
     items: [ 
-        "sdsdsdsd",
-        "sdsds132413"
+        '1',
     ]
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
 import { mice, keyboards, monitors, headphones, microphones, phones } from '../data/data';
 import NavBar from './elements/NavBar';
 import CategoryRow from './elements/CategoryRow';
@@ -16,6 +17,7 @@ interface Product {
 
 const ProductPage: React.FC = () => {
     const { category, productName } = useParams<{ category: string | undefined, productName: string | undefined }>();
+    const dispatch = useDispatch();
 
     const findProduct = (products: Product[], productName: string): Product | undefined => {
         return products.find(product => {
@@ -23,6 +25,15 @@ const ProductPage: React.FC = () => {
             return formattedTitle === productName;
         });
     };
+
+    // const onAddClick = () => {
+    //     dispatch(
+    //         addToCart({
+    //             id:"wqwqw",
+    //         })
+
+    //     )
+    // }
 
     let product: Product | undefined;
     let relatedProducts: Product[] = [];
@@ -62,7 +73,10 @@ const ProductPage: React.FC = () => {
                 <div className='flex flex-col'>
                     <h2 className="text-2xl font-semibold mb-2">{product.title}</h2>
                     <p className='w-[35rem] rounded-md bg-[#e0e0e0] p-2 mt-2'>{product.fullDescription}</p>
+                    <div className='divrow justify-around'>
                     <h1 className='text-6xl m-1 font-semibold text-gray-500'>{product.price}</h1>
+                    {/* <button className='button' onClick={onAddClick} >Додати до кошика</button> */}
+                    </div>
                 </div>
             </section>
             <CategoryRow items={relatedProducts} category={categoryName} />
