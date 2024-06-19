@@ -66,21 +66,21 @@ const ProductPage: React.FC = () => {
 
     return (
         <>
-            <NavBar />
-            <section className='divrow pt-4'>
-                <img className="w-[40rem] h-[30rem] object-contain" src={`/${product.img}`} alt={product.title} />
-                <div className='flex flex-col'>
-                    <h2 className="text-2xl font-semibold mb-2">{product.title}</h2>
-                    <p className='w-[35rem] rounded-md bg-[#e0e0e0] p-2 mt-2'>{product.fullDescription}</p>
-                    <div className='divrow justify-around'>
-                        <h1 className='text-6xl m-1 font-semibold text-gray-500'>{product.price}</h1>
-                        <button className='button' onClick={onAddClick}>Додати до кошика</button>
-                    </div>
-                </div>
-            </section>
-            <CategoryRow items={relatedProducts} category={categoryName} />
+          <NavBar />
+          <section className="flex flex-col md:flex-row md:items-start pt-4 px-4">
+            <img className="w-[40rem] h-[30rem] object-contain" src={`/${product.img}`} alt={product.title} />
+            <div className="flex flex-col mt-4 md:mt-0 md:ml-4 md:w-2/3 lg:w-1/2">
+              <h2 className="text-2xl font-semibold mb-2">{product.title}</h2>
+              <p className="w-full md:max-w-full rounded-md bg-[#e0e0e0] p-2 mt-2">{product.fullDescription}</p>
+              <div className="flex flex-col md:flex-row justify-start md:justify-between items-center mt-4">
+                <h1 className="text-3xl md:text-6xl m-1 font-semibold text-gray-500">{product.price}</h1>
+                <button className="button mt-4 md:mt-0 md:ml-4" onClick={onAddClick}>Додати до кошика</button>
+              </div>
+            </div>
+          </section>
+          <CategoryRow items={relatedProducts} category={categoryName} />
         </>
-    );
-};
-
-export default ProductPage;
+      );
+    };
+    
+    export default ProductPage;

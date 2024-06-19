@@ -25,13 +25,13 @@ const NavBar: React.FC = () => {
         <div className="text-2xl text-white font-bold cursor-pointer" onClick={() => navigate('/')}>MyLogo</div>
         <SearchBar />
         {user ? (
-          <>
-          <div className='divrow'>
+          <div className="flex items-center">
             <button className="button py-2" onClick={handleLogout}>Logout</button>
-            <img src='/assets/cart.png' alt='cart' className='w-12 h-12'/>
-              <h1>{cart.id.length}</h1>
+            <div className="relative">
+              <img src="/assets/cart.png" alt="cart" className="w-12 h-12 ml-4" />
+              <span className="absolute top-0 right-0 text-xs text-white bg-red-500 rounded-full px-2">{cart.id.length}</span>
             </div>
-          </>
+          </div>
         ) : (
           <button className="button my-1 px-3 bg-[#202020]" onClick={handleAuthRedirect}>Login/SignUp</button>
         )}
