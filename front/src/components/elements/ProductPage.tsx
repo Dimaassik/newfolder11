@@ -5,6 +5,7 @@ import mice from '../../data/mice';
 import monitors from '../../data/monitors';
 import headphones from '../../data/headphones';
 import microphones from '../../data/microphones';
+import phones from '../../data/phones';
 
 interface Product {
     id: number;
@@ -36,6 +37,8 @@ const ProductPage: React.FC = () => {
                 product = findProduct(headphones, productName);
             } else if (category.toLowerCase() === 'microphones') {
                 product = findProduct(microphones, productName);
+            } else if (category.toLowerCase() === 'phones') {
+                product = findProduct(phones, productName);
             }
         }
 

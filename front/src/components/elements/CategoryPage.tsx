@@ -5,6 +5,7 @@ import keyboards from '../../data/keyboards';
 import monitors from '../../data/monitors';
 import microphones from '../../data/microphones';
 import headphones from '../../data/headphones';
+import phones from '../../data/phones';
 import NavBar from '../NavBar/NavBar';
 
 const CategoryPage: React.FC = () => {
@@ -20,8 +21,10 @@ const CategoryPage: React.FC = () => {
         return monitors;
       case 'microphones':
         return microphones;
-    case 'headphones':
+      case 'headphones':
         return headphones;
+      case 'phones':
+            return phones;
       default:
         return [];
     }

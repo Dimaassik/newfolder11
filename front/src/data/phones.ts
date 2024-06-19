@@ -1,28 +1,28 @@
-const microphones = [
+const phones = [
     {
         id: 1,
-        category: "Microphones",
-        title: "Blue Yeti USB Microphone",
+        category: "Phones",
+        title: "Google Pixel 8 128GB",
         description: "High-quality USB microphone for recording and streaming.",
-        price: "$120",
+        price: "$550",
         img: "assets/phone1.png"
     },
     {
         id: 2,
-        category: "Microphones",
-        title: "Audio-Technica AT2020",
+        category: "Phones",
+        title: "Samsung Galaxy S24 Ultra 256GB",
         description: "Professional XLR microphone with exceptional sound quality.",
-        price: "$150",
+        price: "$1000",
         img: "assets/phone2.png"
     },
     {
         id: 3,
-        category: "Microphones",
-        title: "Rode NT1-A",
+        category: "Phones",
+        title: "Apple iPhone 14 Pro 128GB",
         description: "Studio condenser microphone with wide frequency response.",
-        price: "$200",
+        price: "$833",
         img: "assets/phone3.png"
     }
 ];
 
-export default microphones;
+export default phones;

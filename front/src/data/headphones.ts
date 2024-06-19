@@ -1,4 +1,4 @@
-const monitors = [
+const headphones = [
     {
       id: 1,
       category: "Headphones",
@@ -25,4 +25,4 @@ const monitors = [
     }
   ];
   
-  export default monitors;
+  export default headphones;

@@ -7,6 +7,7 @@ import keyboards from '../../data/keyboards';
 import monitors from '../../data/monitors';
 import headphones from '../../data/headphones';
 import microphones from '../../data/microphones';
+import phones from '../../data/phones';
 
 const handleMainImg = (img: string) => {
     let el = document.getElementById("mainImg") as HTMLImageElement;
@@ -111,6 +112,22 @@ const MainPage: React.FC = () => {
                     <div className='flex flex-wrap gap-4 justify-center'>
                         {microphones.map((item) => (
                             <div key={item.id} className='product' onClick={() => handleProductClick('microphones', item.title)}>
+                                <div className='flex justify-center items-center mb-2'>
+                                <img className="w-60 h-70 mb-2" src={item.img} alt={item.title} />
+                                </div>
+                                <h4 className='text-lg font-bold'>{item.title}</h4>
+                                <p>{item.description}</p>
+                                <p className='text-sm text-gray-500'>{item.price}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className='mb-6'>
+                    <h3 className='text-xl font-semibold mb-2'>Смартфони</h3>
+                    <div className='flex flex-wrap gap-4 justify-center'>
+                        {phones.map((item) => (
+                            <div key={item.id} className='product' onClick={() => handleProductClick('phones', item.title)}>
                                 <div className='flex justify-center items-center mb-2'>
                                 <img className="w-60 h-70 mb-2" src={item.img} alt={item.title} />
                                 </div>
