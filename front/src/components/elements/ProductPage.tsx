@@ -51,7 +51,7 @@ const ProductPage: React.FC = () => {
             <h2>{product.title}</h2>
             <p>Category: {product.category}</p>
             <p>Price: {product.price}</p>
-            <img src={`/${product.img}`} alt={product.title} />
+            <img className="w-[60rem] h-[10rem] object-contain "src={`/${product.img}`} alt={product.title} />
         </div>
     );
 };
