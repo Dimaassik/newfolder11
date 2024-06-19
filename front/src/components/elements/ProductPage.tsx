@@ -42,7 +42,7 @@ const ProductPage: React.FC = () => {
             <h2>{product.title}</h2>
             <p>Category: {product.category}</p>
             <p>Price: {product.price}</p>
-            <img src={product.img[0]} alt={product.title} />
+            <img src={`/${product.img}`} alt={product.title} />
         </div>
     );
 };

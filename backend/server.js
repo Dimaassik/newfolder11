@@ -19,7 +19,9 @@ app.get('/category/:category/:productName', (req, res) => {
     products = jsonServerRouter.db.get('keyboards').value();
   } else if (category === 'mice') {
     products = jsonServerRouter.db.get('mice').value();
-  }
+  }else if (category === 'monitors') {
+    product = findProduct(monitors, productName);
+}
 
   const product = products.find(p => {
     const formattedTitle = p.title.replace(/\s+/g, '-').toLowerCase();
