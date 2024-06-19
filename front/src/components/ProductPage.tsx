@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { mice, keyboards, monitors, headphones, microphones, phones } from '../../data/data';
-import NavBar from '../NavBar/NavBar';
-import CategoryRow from './CategoryRow';
+import { mice, keyboards, monitors, headphones, microphones, phones } from '../data/data';
+import NavBar from './elements/NavBar';
+import CategoryRow from './elements/CategoryRow';
 
 interface Product {
     id: number;

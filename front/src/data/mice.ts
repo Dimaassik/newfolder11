@@ -48,7 +48,8 @@ const mice = [
         Роздільна здатність сенсора:1000 DPI`,
         price: "$60",
         img: "assets/mouse3.png"
-    }
+    },
+    
 ];
 
 export default mice;

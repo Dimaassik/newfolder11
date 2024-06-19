@@ -1,8 +1,9 @@
 import React from 'react';
-import NavBar from '../NavBar/NavBar';
-import { popularDevices } from "../../data/data";
-import category from '../../data/data'; 
-import CategoryRow from '../elements/CategoryRow';
+import NavBar from './elements/NavBar';
+import { useNavigate } from 'react-router-dom';
+import { popularDevices } from "../data/data";
+import category from '../data/data'; 
+import CategoryRow from './elements/CategoryRow';
 
 const handleMainImg = (img: string) => {
     let el = document.getElementById("mainImg") as HTMLImageElement;
