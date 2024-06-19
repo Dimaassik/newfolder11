@@ -8,6 +8,7 @@ interface Product {
     id: number;
     category: string;
     description: string;
+    fullDescription?: string;
     title: string;
     price: string;
     img: string;
@@ -60,7 +61,7 @@ const ProductPage: React.FC = () => {
                 <img className="w-[40rem] h-[30rem] object-contain" src={`/${product.img}`} alt={product.title} />
                 <div className='flex flex-col'>
                     <h2 className="text-2xl font-semibold mb-2">{product.title}</h2>
-                    <p className='w-[35rem] rounded-md bg-[#a8a8a8] p-2'>{product.description}</p>
+                    <p className='w-[35rem] rounded-md bg-[#e0e0e0] p-2 mt-2'>{product.fullDescription}</p>
                     <h1 className='text-6xl m-1 font-semibold text-gray-500'>{product.price}</h1>
                 </div>
             </section>

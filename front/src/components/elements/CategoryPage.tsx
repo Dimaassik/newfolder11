@@ -1,6 +1,11 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { mice, keyboards, monitors, headphones, microphones, phones } from '../../data/data';
+import mice from '../../data/mice';
+import keyboards from '../../data/keyboards';
+import monitors from '../../data/monitors';
+import microphones from '../../data/microphones';
+import headphones from '../../data/headphones';
+import phones from '../../data/phones';
 import NavBar from '../NavBar/NavBar';
 
 const CategoryPage: React.FC = () => {
@@ -39,6 +44,7 @@ const CategoryPage: React.FC = () => {
           {products.map((item) => (
             <div key={item.id} className='product'>
               <Link to={`/category/${category}/${item.title.replace(/\s+/g, '-').toLowerCase()}`}>
+              
                 <img className="w-[30rem] h-[10rem] object-contain mb-2" src={`/${item.img}`} alt={item.title} />
                 <h4 className='text-lg font-bold'>{item.title}</h4>
                 <p>{item.description}</p>
