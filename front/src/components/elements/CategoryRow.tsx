@@ -33,7 +33,7 @@ const CategoryRow: React.FC<CategoryRowProps> = ({ items, category }) => {
             <div className='flex flex-wrap gap-4 justify-center'>
                 {items.map((item) => (
                     <div key={item.id} className='product' onClick={() => handleProductClick(item.category, item.title)}>
-                            <img className="w-[30rem] h-[10rem] object-contain mb-2" src={item.img} alt={item.title} />
+                            <img className="w-[30rem] h-[10rem] object-contain mb-2" src={`/${item.img}`} alt={item.title} />
                         <h4 className='text-lg font-bold'>{item.title}</h4>
                         <p>{item.description}</p>
                         <p className='text-sm text-gray-500'>{item.price}</p>

@@ -19,12 +19,12 @@ const MainPage: React.FC = () => {
             <NavBar />
             <section className='divrow flex-wrap py-2 bg-[#202020]'>
                 <div className="shadow-xl p-2">
-                    <img className="w-[30rem] h-[22rem]" id="mainImg" src={popularDevices[0].img} alt='Головне фото' />
+                    <img className=" object-contain w-[30rem] h-[22rem]" id="mainImg" src={popularDevices[0].img} alt='Головне фото' />
                 </div>
                 <div className='flex flex-col gap-2 '>
                     {popularDevices.map((item) => (
                         <div className='flex items-center rounded-md bg-[#a8a8a8] p-2 cursor-pointer hover:brightness-75' onMouseEnter={ () => handleMainImg(item.img)}>
-                            <img className="p-1 w-24 h-16"src={item.img} alt={item.text} />
+                            <img className="object-contain p-1 w-24 h-16"src={item.img} alt={item.text} />
                             <p className="p-2">{item.text}</p>
                         </div>
                     ))}

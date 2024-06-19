@@ -37,6 +37,7 @@ export const category = [
         data: phones,
     }
 ];
+export { mice, keyboards, monitors, microphones, headphones, phones };
 export default category;
 export const popularDevices = [
     {
