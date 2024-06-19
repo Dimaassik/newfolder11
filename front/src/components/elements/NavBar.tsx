@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useUser } from '../UserContext';
 import { category } from '../../data/data';
-import SearchBar from './Search/SearchBar';
+import SearchBar from './SearchBar';
 import { useSelector } from 'react-redux';
 
 const NavBar: React.FC = () => {
@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
           <div className='divrow'>
             <button className="button py-2" onClick={handleLogout}>Logout</button>
             <img src='/assets/cart.png' alt='cart' className='w-12 h-12'/>
-              <h1>Cart Items: {cart.id.length}</h1>
+              <h1>{cart.id.length}</h1>
             </div>
           </>
         ) : (

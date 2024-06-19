@@ -3,29 +3,34 @@ import { useParams, Link } from 'react-router-dom';
 import { mice, keyboards, monitors, headphones, microphones, phones } from '../data/data';
 import NavBar from './elements/NavBar';
 
+interface Product {
+    id: number;
+    category: string;
+    title: string;
+    description: string;
+    fullDescription: string;
+    price: string;
+    img: string;
+}
+
+type Categories = {
+    [key: string]: Product[];
+};
+
 const CategoryPage: React.FC = () => {
   const { category } = useParams<{ category?: string }>();
 
-  const getProducts = () => {
-    switch (category) {
-      case 'mice':
-        return mice;
-      case 'keyboards':
-        return keyboards;
-      case 'monitors':
-        return monitors;
-      case 'microphones':
-        return microphones;
-      case 'headphones':
-        return headphones;
-      case 'phones':
-            return phones;
-      default:
-        return [];
-    }
+  const categories: Categories = {
+    mice,
+    keyboards,
+    monitors,
+    headphones,
+    microphones,
+    phones
   };
 
-  const products = getProducts();
+  const products = category ? categories[category] || [] : [];
+
   if (!category) {
     return <div>Category not found</div>;
   }
@@ -39,13 +44,12 @@ const CategoryPage: React.FC = () => {
           {products.map((item) => (
             <div key={item.id} className='product'>
               <Link to={`/category/${category}/${item.title.replace(/\s+/g, '-').toLowerCase()}`}>
-              
                 <img className="w-[30rem] h-[10rem] object-contain mb-2" src={`/${item.img}`} alt={item.title} />
                 <h4 className='text-lg font-bold'>{item.title}</h4>
                 <p>{item.description}</p>
                 <p className='text-sm text-gray-500'>{item.price}</p>
               </Link>
-              </div>
+            </div>
           ))}
         </div>
       </section>

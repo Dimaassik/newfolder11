@@ -6,8 +6,8 @@ import category from '../data/data';
 import CategoryRow from './elements/CategoryRow';
 
 const handleMainImg = (img: string) => {
-    let el = document.getElementById("mainImg") as HTMLImageElement;
-    if (el) el.src = img;
+    let item = document.getElementById("mainImg") as HTMLImageElement;
+    if (item) item.src = img;
     return;
 }
 

@@ -78,6 +78,29 @@ const keyboards = [
         Розміри: 356x134x34 мм`,
         price: "$180",
         img: "assets/keyboard3.png"
+    },
+    {
+        id: 4,
+        category: "Keyboards",
+        title: "Logitech Pebble Keys 2 K380s Tonal White",
+        description: "Compact keyboard with silent keys and sleek design.",
+        fullDescription: `
+        Колір: Білий
+        Тип підключення: дротова
+        Тип: ігрові
+        Формат: компактна (ANSI), без блоку Num
+        Хід клавіш: високого
+        Тип клавіш: класичного типу
+        Конструкція клавіш: механічна
+        Перемикачі: EC Rose V2 (Linear)
+        Anti-Ghosting: так
+        Клавіша Fn: так
+        Регулювання гучності: через Fn
+        Підсвічування: біла
+        Знімний кабель: так
+        Розміри: 356x134x34 мм`,
+        price: "$180",
+        img: "assets/keyboard4.jpg"
     }
 ];
 

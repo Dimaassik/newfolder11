@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import keyboards from '../../../data/keyboards';
-import mice from '../../../data/mice';
+import keyboards from '../../data/keyboards';
+import mice from '../../data/mice';
 
 interface Product {
     id: number;
