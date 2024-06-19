@@ -26,9 +26,9 @@ const NavBar: React.FC = () => {
         <SearchBar />
         {user ? (
           <>
-          <div>
+          <div className='divrow'>
             <button className="button py-2" onClick={handleLogout}>Logout</button>
-            <img src='./assets/cart.png' alt='cart'/>
+            <img src='/assets/cart.png' alt='cart' className='w-12 h-12'/>
               Cart Items: {cart.items.length}
             </div>
           </>
