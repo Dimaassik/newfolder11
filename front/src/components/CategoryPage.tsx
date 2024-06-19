@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { mice, keyboards, monitors, headphones, microphones, phones } from '../../data/data';
-import NavBar from '../NavBar/NavBar';
+import { mice, keyboards, monitors, headphones, microphones, phones } from '../data/data';
+import NavBar from './elements/NavBar';
 
 const CategoryPage: React.FC = () => {
   const { category } = useParams<{ category?: string }>();

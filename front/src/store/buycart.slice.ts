@@ -5,7 +5,10 @@ interface BuyCartState {
 }
 
 const initialState: BuyCartState = {
-    items: []
+    items: [ 
+        "sdsdsdsd",
+        "sdsds132413"
+    ]
 };
 
 const buyCart = createSlice({

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import MainPage from './components/MainPage/MainPage';
+import MainPage from './components/MainPage';
 import SignUpPage from './components/AuthPage/SignUp';
 import LoginPage from './components/AuthPage/Login';
-import ProductPage from './components/elements/ProductPage';
-import CategoryPage from './components/elements/CategoryPage';
+import ProductPage from './components/ProductPage';
+import CategoryPage from './components/CategoryPage';
 import { Provider } from 'react-redux';
 import { store } from './store/store'
 
