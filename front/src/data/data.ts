@@ -24,6 +24,7 @@ export const category = [
         link: "/category/phones",
     }
 ];
+export default category;
 export const popularDevices = [
     {
         img: "assets/monitor1.png",

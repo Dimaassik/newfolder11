@@ -8,7 +8,7 @@ interface Product {
     category: string;
     title: string;
     price: string;
-    images: string[];
+    img: string;
 }
 
 const SearchBar: React.FC = () => {

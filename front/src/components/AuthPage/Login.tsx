@@ -28,7 +28,7 @@ const LoginPage: React.FC = () => {
       .post('http://localhost:3001/login', { email, password })
       .then((response) => {
         console.log("response:", response.data);
-        login({ email }); // Save user in context
+        login({ email });
         navigate("/");
       })
       .catch((err) => {
@@ -46,7 +46,7 @@ const LoginPage: React.FC = () => {
     <>
       <NavBar />
       <section className="flex justify-center mt-2">
-        <div className="authDiv">
+        <div className="authDiv bg-[#e0e0e0]">
           <h1 className="authText">E-mail</h1>
           <input
             id='mail'

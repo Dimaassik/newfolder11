@@ -34,7 +34,7 @@ const SignUpPage: React.FC = () => {
     axios.post('http://localhost:3001/signup', { firstName, email, password })
       .then(result => {
         console.log(result.data);
-        login({ email }); // Save user in context
+        login({ email });
         navigate('/');
       })
       .catch(err => {
@@ -51,7 +51,7 @@ const SignUpPage: React.FC = () => {
     <>
       <NavBar />
       <section className="flex justify-center mt-2">
-        <div className="authDiv">
+        <div className="authDiv bg-[#e0e0e0]">
           <h1 className="authText">Ім'я</h1>
           <input
             type="text"
