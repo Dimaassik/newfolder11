@@ -66,11 +66,10 @@ const NavBar: React.FC = () => {
                 ))}
                 {user ? (
                     <>
-                        <button className="block w-full text-left px-4 py-2 text-white hover:bg-gray-400" onClick={handleLogout}>Logout</button>
-                        <div className="relative hover:brightness-50 flex items-center px-4 py-2">
-                            <img src="/assets/cart.png" alt="cart" className="w-8 h-8" />
-                            <span className="absolute top-0 right-0 text-xs text-white bg-red-500 rounded-full px-2">{cart.length}</span>
+                        <div className="" onClick={handleCart}>
+                            <p className="text-white px-4 py-2 text-lg hover:bg-gray-400 cursor-pointer">Кошик</p>
                         </div>
+                        <button className="block w-full text-left px-4 py-2 text-white hover:bg-red-500" onClick={handleLogout}>Logout</button>
                     </>
                 ) : (
                     <button className="block w-full text-left px-4 py-2 text-white hover:bg-gray-400" onClick={handleAuthRedirect}>Login/SignUp</button>
