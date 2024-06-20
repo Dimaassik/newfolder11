@@ -53,13 +53,7 @@ const SearchBar: React.FC = () => {
 
     return (
         <div className="relative">
-            <input
-                type="text"
-                value={searchTerm}
-                onChange={handleSearchChange}
-                className='rounded-xl border border-gray-400 pl-2 text-left font-bitter hover:border-black w-48 md:w-64 py-1 px-3'
-                placeholder="Пошук"
-            />
+            <input type="text" value={searchTerm} onChange={handleSearchChange} className='rounded-xl border border-gray-400 pl-2 text-left font-bitter hover:border-black w-48 md:w-64 py-1 px-3' placeholder="Пошук"/>
             {filteredProducts.length > 0 && (
                 <ul className="absolute top-full bg-white shadow-md border border-gray-200 rounded mt-1 w-48 md:w-64">
                     {filteredProducts.map(product => (
