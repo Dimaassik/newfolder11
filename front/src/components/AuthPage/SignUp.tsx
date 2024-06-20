@@ -53,34 +53,13 @@ const SignUpPage: React.FC = () => {
       <section className="flex justify-center mt-2">
         <div className="authDiv bg-[#e0e0e0]">
           <h1 className="authText">Ім'я</h1>
-          <input
-            type="text"
-            className="authInput"
-            placeholder="Ім'я"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)} />
+          <input type="text" className="authInput" placeholder="Ім'я" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
           <h1 className="authText">E-mail</h1>
-          <input
-            id="mail"
-            type="email"
-            className="authInput"
-            placeholder="E-mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)} />
+          <input id="mail" type="email" className="authInput" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
           <h1 className="authText">Пароль</h1>
-          <input
-            type="password"
-            className="authInput"
-            placeholder="Пароль"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" className="authInput" placeholder="Пароль" value={password} onChange={(e) => setPassword(e.target.value)} />
           <h1 className="authText">Повторіть пароль</h1>
-          <input
-            type="password"
-            className="authInput mb-2"
-            placeholder="Повторіть пароль"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)} />
+          <input type="password" className="authInput mb-2" placeholder="Повторіть пароль" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
           <button className="button" onClick={handleSignUp}>Зареєструватися</button>
           <Link to="/login" className="button text-center">Маю аккаунт</Link>
         </div>

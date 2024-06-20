@@ -1,7 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import keyboards from '../../data/keyboards';
-import mice from '../../data/mice';
+import { mice, keyboards, monitors, headphones, microphones, phones } from '../../data/data';
 
 interface Product {
     id: number;
@@ -17,14 +16,23 @@ const SearchBar: React.FC = () => {
     const navigate = useNavigate();
 
     const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const term = event.target.value;
+        const term = event.target.value.toLowerCase();
         setSearchTerm(term);
 
         if (term.length > 1) {
-            const results = [
-                ...keyboards.filter(product => product.title.toLowerCase().includes(term.toLowerCase())),
-                ...mice.filter(product => product.title.toLowerCase().includes(term.toLowerCase()))
+            const allProducts = [
+                ...keyboards,
+                ...mice,
+                ...monitors,
+                ...headphones,
+                ...microphones,
+                ...phones
             ];
+
+            const results = allProducts
+                .filter(product => product.title.toLowerCase().includes(term))
+                .sort((a, b) => a.title.toLowerCase().startsWith(term) ? -1 : b.title.toLowerCase().startsWith(term) ? 1 : 0);
+
             setFilteredProducts(results);
         } else {
             setFilteredProducts([]);
@@ -44,16 +52,16 @@ const SearchBar: React.FC = () => {
     };
 
     return (
-        <div className="search-bar relative bg-white p-2 rounded-xl flex items-center">
+        <div className="relative">
             <input
                 type="text"
                 value={searchTerm}
                 onChange={handleSearchChange}
-                className=' rounded-xl border border-grays-light pl-2 text-left font-bitter hover:border-black'
+                className='rounded-xl border border-gray-400 pl-2 text-left font-bitter hover:border-black w-48 md:w-64 py-1 px-3'
                 placeholder="Пошук"
             />
             {filteredProducts.length > 0 && (
-                <ul className="dropdown-menu absolute top-full bg-white shadow-md border border-gray-200 rounded">
+                <ul className="absolute top-full bg-white shadow-md border border-gray-200 rounded mt-1 w-48 md:w-64">
                     {filteredProducts.map(product => (
                         <li key={product.id} onClick={() => handleProductClick(product)} className="px-4 py-2 cursor-pointer hover:bg-gray-100">
                             {product.title}
@@ -61,7 +69,7 @@ const SearchBar: React.FC = () => {
                     ))}
                 </ul>
             )}
-            <button><img className="h-4 w-4 m-1 cursor-pointer" src="/assets/search.png" alt='search'/></button>
+            <button className="absolute right-2 top-1"><img className="h-4 w-4 m-1 cursor-pointer" src="/assets/search.png" alt='search'/></button>
         </div>
     );
 };

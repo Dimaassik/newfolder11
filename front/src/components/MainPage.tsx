@@ -18,7 +18,7 @@ const MainPage: React.FC = () => {
             <NavBar />
             <section className='divrow flex-wrap py-2 bg-[#202020]'>
                 <div className="shadow-xl p-2">
-                    <img className="w-[30rem] h-[22rem]" id="mainImg" src={popularDevices[0].img} alt='Головне фото' />
+                    <img className="w-[28rem] h-[22rem]" id="mainImg" src={popularDevices[0].img} alt='Головне фото' />
                 </div>
                 <div className='flex flex-col gap-2 '>
                     {popularDevices.map((item) => (
