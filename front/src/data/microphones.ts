@@ -11,7 +11,7 @@ const microphones = [
         ДН:кардіоїдна
         Підключення:USB A (для ПК та ноутбуків)
         Частота:20 – 20000 Гц`,
-        price: "$120",
+        price: "120",
         img: "assets/microphone1.png"
     },
     {
@@ -28,7 +28,7 @@ const microphones = [
         Частота:20 – 20000 Гц
         Опір:100 Ом
         Чутливість:-37 дБ`,
-        price: "$175",
+        price: "175",
         img: "assets/microphone2.png"
     },
     {
@@ -45,7 +45,7 @@ const microphones = [
         Частота:20 – 20000 Гц
         Опір:100 Ом
         Чутливість:-32 дБ`,
-        price: "$220",
+        price: "220",
         img: "assets/microphone3.png"
     }
     ,
@@ -66,7 +66,7 @@ const microphones = [
         Роз'єм підключення:XLR
         Матеріал корпуса:пластик
         Вага:764 г`,
-        price: "$600",
+        price: "600",
         img: "assets/microphone4.png"
     }
 ];

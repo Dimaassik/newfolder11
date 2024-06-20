@@ -19,11 +19,14 @@ const SignUpPage: React.FC = () => {
 
   const handleSignUp = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    if (!firstName || !email || !password || password !== confirmPassword) {
+    if (!firstName || !email || !password || (password !== confirmPassword)) {
       const inputs = document.querySelectorAll<HTMLInputElement>('input');
+      const search = document.getElementById('search');
       inputs.forEach(input => {
           input.className = 'authInputEr';
       });
+      if(search) search.className='mainsearch'
+      return;
     }
     if (!validateEmail(email)) {
       const mail = document.getElementById('mail');

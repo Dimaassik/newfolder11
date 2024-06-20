@@ -22,7 +22,7 @@ const keyboards = [
         Знімний кабель: так
         Розміри: 357x130x38 мм
         Вага: 685 г`,
-        price: "$185",
+        price: "185",
         img: "assets/keyboard1.png"
     },
     {
@@ -53,7 +53,7 @@ const keyboards = [
         Знімний кабель: так
         Розміри: 382x134x40 мм
         Вага: 1100 г`,
-        price: "$160",
+        price: "160",
         img: "assets/keyboard2.png"
     },
     {
@@ -76,7 +76,7 @@ const keyboards = [
         Підсвічування: біла
         Знімний кабель: так
         Розміри: 356x134x34 мм`,
-        price: "$260",
+        price: "260",
         img: "assets/keyboard3.png"
     },
     {
@@ -99,7 +99,7 @@ const keyboards = [
         Інтерфейс підключення	USB
         Розміри	457x174x33 мм
         Вага	904 г`,
-        price: "$180",
+        price: "180",
         img: "assets/keyboard4.png"
     }
 ];

@@ -22,8 +22,7 @@ const ProductPage: React.FC = () => {
 
     const findProduct = (products: Product[], productName: string) => {
         return products.find(product => {
-            const formattedTitle = product.title.replace(/\s+/g, '-').toLowerCase();
-            return formattedTitle === productName;
+            return product.title.replace(/\s+/g, '-').toLowerCase() === productName;
         });
     };
 
@@ -49,12 +48,14 @@ const ProductPage: React.FC = () => {
         }
     }, [categoryName, productName]);
 
-    const onAddClick = () => {
+    const AddToCart = () => {
     if (product) {
         dispatch(
             addToCart({
-                itemId: product.id.toString(),
-                title: product.title.toString(),
+                id: product.id.toString(),
+                name: product.title,
+                price: product.price,
+                img: product.img,
             })
         );
     }
@@ -73,8 +74,8 @@ const ProductPage: React.FC = () => {
               <h2 className="text-2xl font-semibold mb-2">{product.title}</h2>
               <p className="w-full md:max-w-full rounded-md bg-[#e0e0e0] p-2 mt-2">{product.fullDescription}</p>
               <div className="flex flex-col md:flex-row justify-start md:justify-between items-center mt-4">
-                <h1 className="text-3xl md:text-6xl m-1 font-semibold text-gray-500">{product.price}</h1>
-                <button className="button mt-4 md:mt-0 md:ml-4" onClick={onAddClick}>Додати до кошика</button>
+                <h1 className="text-3xl md:text-6xl m-1 font-semibold text-gray-500">${product.price}</h1>
+                <button className="button mt-4 md:mt-0 md:ml-4" onClick={AddToCart}>Додати до кошика</button>
               </div>
             </div>
           </section>

@@ -19,6 +19,21 @@
       "firstName": "root",
       "email": "root@r.oot",
       "password": "1"
+    },
+    {
+      "firstName": "Боба",
+      "email": "211@d.c",
+      "password": "1"
+    },
+    {
+      "firstName": "1213",
+      "email": "21@d.cp",
+      "password": "1"
+    },
+    {
+      "firstName": "2",
+      "email": "21@d.cp2",
+      "password": "2"
     }
   ]
 }

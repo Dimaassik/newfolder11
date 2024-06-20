@@ -12,7 +12,7 @@ const monitors = [
       Тип матриці: VA
       Контрастність дисплея: 3000:1
       Особливості: Вигнутий екран`,
-      price: "$350",
+      price: "350",
       img: "assets/monitor1.png"
   },
   {
@@ -28,7 +28,7 @@ const monitors = [
       Тип матриці: VA
       Контрастність дисплея: 3000:1
       Особливості: Безрамковий (Сinema screen), Вигнутий екран`,
-      price: "$550",
+      price: "550",
       img: "assets/monitor2.png"
   },
   {
@@ -44,7 +44,7 @@ const monitors = [
       Тип матриці: IPS
       Контрастність дисплея: 100,000,000:1/1000:1
       Особливості: Безрамковий (Сinema screen), Поворотний екран (Pivot), Регулювання за висотою`,
-      price: "$420",
+      price: "420",
       img: "assets/monitor3.png"
   },
   {
@@ -60,7 +60,7 @@ const monitors = [
       Тип матриці:IPS
       Контрастність дисплея:1000:1
       Особливості:Flicker-Free,Безрамковий (Сinema screen)`,
-      price: "$220",
+      price: "220",
       img: "assets/monitor4.png"
   }
 ];

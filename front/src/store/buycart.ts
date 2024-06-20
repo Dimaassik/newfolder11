@@ -1,14 +1,21 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface AddToCartPayload {
-    itemId: string;
-    title: string;
+    id: string;
+    name: string;
+    price: string;
+    img: string;
+}
+interface RemFromCartPayload {
+    name: string;
 }
 
 interface CartItem {
     id: string;
     name: string;
     count: number;
+    price: string;
+    img: string;
 }
 
 const initialState: CartItem[] = [];
@@ -18,24 +25,41 @@ const buyCart = createSlice({
     initialState,
     reducers: {
         addToCart: (state, action: PayloadAction<AddToCartPayload>) => {
-            const { itemId, title } = action.payload;
-            const existingItem = state.find((item) => item.name === title)
+            const { id, name, price, img} = action.payload;
+            const existingItem = state.find((item) => item.name === name)
             if (existingItem) {
-                existingItem.count++
+                existingItem.count++;
             }else
             {
-                state.push({ id: itemId, name: title, count: 1 });
+                state.push({ id, name, count: 1, price, img});
             }
         },
+        remFromCart: (state, action: PayloadAction<RemFromCartPayload>) => {
+            const { name } = action.payload;
+            const existingItem = state.find((item) => item.name === name);
+            if (existingItem) {
+                if (existingItem.count > 1) {
+                    existingItem.count--;
+                } else {
+                    return state.filter((item) => item.name !== name);
+                }
+            }
+            return state;
+        }
+        
     },
      selectors:{
          selectTotalItemCount :(state) => (
             state.reduce((total, item) => total + item.count, 0)
-         )
+         ),
+         selectTotalPrice: (state) => (
+            state.reduce((total, item) => total + parseFloat(item.price) * item.count, 0)
+
+        )
      }
 });
 
 
-export const { addToCart } = buyCart.actions;
-export const { selectTotalItemCount } = buyCart.selectors;
+export const { addToCart, remFromCart } = buyCart.actions;
+export const { selectTotalItemCount, selectTotalPrice } = buyCart.selectors;
 export default buyCart.reducer;
