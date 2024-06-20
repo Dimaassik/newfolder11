@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { mice, keyboards, monitors, headphones, microphones, phones } from '../data/data';
 import NavBar from './elements/NavBar';
 import CategoryRow from './elements/CategoryRow';
-import { addToCart } from '../store/buycart.slice';
+import { addToCart } from '../store/buycart';
 
 interface Product {
     id: number;
@@ -50,7 +50,6 @@ const ProductPage: React.FC = () => {
     }, [categoryName, productName]);
 
     const onAddClick = () => {
-        console.log(categoryName)
     if (product) {
         dispatch(
             addToCart({

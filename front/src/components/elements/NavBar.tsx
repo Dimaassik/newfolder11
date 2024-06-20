@@ -76,6 +76,7 @@ const NavBar: React.FC = () => {
             </Drawer>
         </>
     );
+
 };
 
 export default NavBar;
