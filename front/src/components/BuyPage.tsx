@@ -9,7 +9,10 @@ const BuyPage: React.FC = () => {
         <>
             <NavBar />
             {cart.map((item : any) => (
+                <>
                 <p>{item.name}</p>
+                <p>{item.count}</p>
+                </>
             ))}
         </>
     );
