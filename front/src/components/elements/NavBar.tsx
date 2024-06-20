@@ -34,7 +34,9 @@ const NavBar: React.FC = () => {
     return (
         <>
             <nav className="flex justify-between bg-grays-dark p-2 pl-3 items-center flex-wrap">
-                <div className="text-2xl text-white font-bold cursor-pointer" onClick={() => navigate('/')}>MyLogo</div>
+            <div className="text-2xl text-white font-bold cursor-pointer" onClick={() => navigate('/')}>
+                <img src="/assets/logo.png" alt="MyLogo" className='w-[3.5rem] mx-6'/>
+            </div>
                 <SearchBar />
                 <div className="flex items-center md:hidden">
                     <button className="text-white" onClick={toggleNavDrawer}>
