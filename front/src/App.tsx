@@ -5,6 +5,7 @@ import SignUpPage from './components/AuthPage/SignUp';
 import LoginPage from './components/AuthPage/Login';
 import ProductPage from './components/ProductPage';
 import CategoryPage from './components/CategoryPage';
+import BuyPage from './components/BuyPage';
 import { Provider } from 'react-redux';
 import { store } from './store/store'
 
@@ -17,6 +18,7 @@ const App: React.FC = () => {
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/category/:category" element={<CategoryPage />} />
                 <Route path="/category/:category/:productName" element={<ProductPage />} />
+                <Route path="/cart" element={<BuyPage />} />
             </Routes>
         </Provider>
     );

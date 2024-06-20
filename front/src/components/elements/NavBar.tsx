@@ -18,6 +18,9 @@ const NavBar: React.FC = () => {
     logout();
     navigate('/');
   };
+  const handleCart = () => {
+    navigate('/cart');
+  };
 
   return (
     <>
@@ -27,9 +30,9 @@ const NavBar: React.FC = () => {
         {user ? (
           <div className="flex items-center">
             <button className="button py-2" onClick={handleLogout}>Logout</button>
-            <div className="relative hover:brightness-50 ">
+            <div className="relative hover:brightness-50" onClick={handleCart}>
               <img src="/assets/cart.png" alt="cart" className="w-12 h-12 ml-4" />
-              <span className="absolute top-0 right-0 text-xs text-white bg-red-500 rounded-full px-2">{cart.id.length}</span>
+              <span className="absolute top-0 right-0 text-xs text-white bg-red-500 rounded-full px-2">{ cart.length }</span>
             </div>
           </div>
         ) : (
