@@ -13,7 +13,7 @@ const mice = [
         Тип датчика:Оптичний
         Колір:Чорний
         Джерело живлення:1 х AA`,
-        price: "$50",
+        price: "$30",
         img: "assets/mouse1.png"
     },
     {
@@ -31,7 +31,7 @@ const mice = [
         Тип датчика:Оптичний
         Вага брутто, кг:0.096
         Колір:Чорний`,
-        price: "$40",
+        price: "$20",
         img: "assets/mouse2.png"
     },
     {
@@ -46,10 +46,27 @@ const mice = [
         Технологія:оптична
         Призначення:ноутбучна
         Роздільна здатність сенсора:1000 DPI`,
-        price: "$60",
+        price: "$220",
         img: "assets/mouse3.png"
-    },
-    
+    }
+    ,
+    {
+        id: 4,
+        category: "Mice",
+        title: "Razer DeathAdder V3 Pro Faker Edition",
+        description: "Mouse with gaming LGBT lighting and customizable buttons.",
+        fullDescription:`
+        Під'єднання:Бездротове
+        Розмір миші:Велика
+        Інтерфейс:USB
+        Cенсор, dpi:10000
+        Кількість кнопок миші:5
+        Тип датчика:Оптичний
+        Колір:Червоний
+        Джерело живлення:2 х AA`,
+        price: "$99",
+        img: "assets/mouse4.png"
+    }
 ];
 
 export default mice;

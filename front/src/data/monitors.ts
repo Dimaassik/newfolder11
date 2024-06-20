@@ -28,7 +28,7 @@ const monitors = [
       Тип матриці: VA
       Контрастність дисплея: 3000:1
       Особливості: Безрамковий (Сinema screen), Вигнутий екран`,
-      price: "$300",
+      price: "$550",
       img: "assets/monitor2.png"
   },
   {
@@ -44,8 +44,24 @@ const monitors = [
       Тип матриці: IPS
       Контрастність дисплея: 100,000,000:1/1000:1
       Особливості: Безрамковий (Сinema screen), Поворотний екран (Pivot), Регулювання за висотою`,
-      price: "$400",
+      price: "$420",
       img: "assets/monitor3.png"
+  },
+  {
+      id: 4,
+      category: "Monitors",
+      title: "Acer EK251YEBI Full HD 24.5'",
+      description: "Gaming monitor with high refresh rate and low latency.",
+      fullDescription: `
+      Діагональ дисплея:24.5"
+      Максимальна роздільна здатність дисплея:1920x1080 (FullHD)
+      Час реакції матриці:1 мс (VRB) / 4 мс (GTG)
+      Яскравість дисплея:250 кд/м²
+      Тип матриці:IPS
+      Контрастність дисплея:1000:1
+      Особливості:Flicker-Free,Безрамковий (Сinema screen)`,
+      price: "$220",
+      img: "assets/monitor4.png"
   }
 ];
 

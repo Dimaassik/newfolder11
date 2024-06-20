@@ -25,7 +25,7 @@ const headphones = [
       Підключення:комбіновані, 3.5 мм, Bluetooth v 5.2
       Кабель:круглий, 1.2 м
       Акумулятор:до 30 год`,
-      price: "$300",
+      price: "$500",
       img: "assets/headphone2.png"
     },
     {
@@ -39,8 +39,23 @@ const headphones = [
       Хар-ки:20 – 20000 Гц, 35 Ом
       Підключення:дротові, 3.5 мм, 2х3.5 мм, USB A
       Кабель:круглий, в оплетці, 2 м`,
-      price: "$400",
+      price: "$250",
       img: "assets/headphone3.png"
+    }
+    ,
+    {
+      id: 4,
+      category: "Headphones",
+      title: "Logitech G435",
+      description: "Gaming headset engineered with advanced audio drivers and clear communication for competitive gaming.",
+      fullDescription:`
+      Призначення:ігрові
+      Конструкція:накладні, закриті
+      Хар-ки:20 – 20000 Гц, 45 Ом
+      Підключення:бездротові, USB A, радіоканал, Bluetooth
+      Акумулятор:до 18 год`,
+      price: "$330",
+      img: "assets/headphone4.png"
     }
   ];
   

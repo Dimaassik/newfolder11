@@ -49,6 +49,24 @@ const phones = [
         price: "$833",
         img: "assets/phone3.png"
     }
+    ,
+    {
+        id: 4,
+        category: "Phones",
+        title: "OnePlus 12 256GB",
+        description: "Premium AboBus with powerful hardware, innovative design, and stunning user experience.",
+        fullDescription:`
+        Екран:6.82 ", AMOLED (LTPO), 3168x1440, 510 ppi, 120 Гц
+        Камера:3 модулі, 50 МП, + 48 МП, та 64 МП
+        Відео:fullHD 60 к/с, 4K, стабілізація, уповільнена зйомка
+        Пам'ять:256 ГБ
+        Процесор:Snapdragon 8 Gen 3
+        ОЗП:12 ГБ
+        Акумулятор:5400 мАгод
+        Корпус:скло, 220 г, товщина 9 мм`,
+        price: "$750",
+        img: "assets/phone4.png"
+    }
 ];
 
 export default phones;

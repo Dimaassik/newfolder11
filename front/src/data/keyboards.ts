@@ -22,7 +22,7 @@ const keyboards = [
         Знімний кабель: так
         Розміри: 357x130x38 мм
         Вага: 685 г`,
-        price: "$150",
+        price: "$185",
         img: "assets/keyboard1.png"
     },
     {
@@ -53,7 +53,7 @@ const keyboards = [
         Знімний кабель: так
         Розміри: 382x134x40 мм
         Вага: 1100 г`,
-        price: "$100",
+        price: "$160",
         img: "assets/keyboard2.png"
     },
     {
@@ -76,31 +76,31 @@ const keyboards = [
         Підсвічування: біла
         Знімний кабель: так
         Розміри: 356x134x34 мм`,
-        price: "$180",
+        price: "$260",
         img: "assets/keyboard3.png"
     },
     {
         id: 4,
         category: "Keyboards",
-        title: "Logitech Pebble Keys 2 K380s Tonal White",
+        title: "Razer Cynosa Lite Chroma ",
         description: "Compact keyboard with silent keys and sleek design.",
         fullDescription: `
-        Колір: Білий
-        Тип підключення: дротова
-        Тип: ігрові
-        Формат: компактна (ANSI), без блоку Num
-        Хід клавіш: високого
-        Тип клавіш: класичного типу
-        Конструкція клавіш: механічна
-        Перемикачі: EC Rose V2 (Linear)
-        Anti-Ghosting: так
-        Клавіша Fn: так
-        Регулювання гучності: через Fn
-        Підсвічування: біла
-        Знімний кабель: так
-        Розміри: 356x134x34 мм`,
+        Тип підключення:дротова
+        Тип:ігрова
+        Формат	стандартна (ANSI), з Num-блоком
+        Хід клавіш:	високого
+        Тип клавіш:	класичного типу
+        Конструкція клавіш:	мембранна
+        Anti-Ghosting	
+        Регулювання гучності:	через Fn
+        Ігровий режим	
+        Підсвічування	RGB
+        Підсвічування з ефектами	Razer Chroma
+        Інтерфейс підключення	USB
+        Розміри	457x174x33 мм
+        Вага	904 г`,
         price: "$180",
-        img: "assets/keyboard4.jpg"
+        img: "assets/keyboard4.png"
     }
 ];
 

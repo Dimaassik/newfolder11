@@ -28,7 +28,7 @@ const microphones = [
         Частота:20 – 20000 Гц
         Опір:100 Ом
         Чутливість:-37 дБ`,
-        price: "$150",
+        price: "$175",
         img: "assets/microphone2.png"
     },
     {
@@ -45,8 +45,29 @@ const microphones = [
         Частота:20 – 20000 Гц
         Опір:100 Ом
         Чутливість:-32 дБ`,
-        price: "$200",
+        price: "$220",
         img: "assets/microphone3.png"
+    }
+    ,
+    {
+        id: 4,
+        category: "Microphones",
+        title: "Shure SM7B",
+        description: "Studio condenser microphone with wide frequency response.",
+        fullDescription:`
+        Мікрофон:студійний
+        Принцип дії	динамічний
+        Спрямованість мікрофона:односпрямований
+        Діаграма спрямованості:кардіоїдна
+        Номінальний опір:150 Ом
+        Частотний діапазон:50 – 20000 Гц
+        Чутливість:-59 дБ
+        Функції та можливості:ФНЧ (Roll-off)
+        Роз'єм підключення:XLR
+        Матеріал корпуса:пластик
+        Вага:764 г`,
+        price: "$600",
+        img: "assets/microphone4.png"
     }
 ];
 
