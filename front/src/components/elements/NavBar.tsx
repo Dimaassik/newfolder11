@@ -1,15 +1,17 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useUser } from '../UserContext';
 import { category } from '../../data/data';
 import SearchBar from './SearchBar';
 import { useSelector } from 'react-redux';
+import { selectTotalItemCount } from '../../store/buycart';
 import Drawer from './Drawer';
 
 const NavBar: React.FC = () => {
     const navigate = useNavigate();
     const { user, logout } = useUser();
     const cart = useSelector((state: any) => state.cart);
+    const TotalCart = useSelector(selectTotalItemCount);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const handleAuthRedirect = () => {
@@ -45,7 +47,7 @@ const NavBar: React.FC = () => {
                             <button className="button py-2" onClick={handleLogout}>Logout</button>
                             <div className="relative hover:brightness-50" onClick={handleCart}>
                                 <img src="/assets/cart.png" alt="cart" className="w-12 h-12 ml-4" />
-                                <span className="absolute top-0 right-0 text-xs text-white bg-red-500 rounded-full px-2">{cart.length}</span>
+                                <span className="absolute top-0 right-0 text-xs text-white bg-red-500 rounded-full px-2">{TotalCart}</span>
                             </div>
                         </>
                     ) : (

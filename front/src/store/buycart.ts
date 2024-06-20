@@ -28,14 +28,14 @@ const buyCart = createSlice({
             }
         },
     },
-    // selectors:{
-    //     selectTotalItemCount :() => createSelector(
-    //         [selectCartItems],
-    //         (cartItems) => cartItems.reduce((total, item) => total + item.count, 0)
-    //     );
-    // }
+     selectors:{
+         selectTotalItemCount :(state) => (
+            state.reduce((total, item) => total + item.count, 0)
+         )
+     }
 });
 
 
 export const { addToCart } = buyCart.actions;
+export const { selectTotalItemCount } = buyCart.selectors;
 export default buyCart.reducer;
