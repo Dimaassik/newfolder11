@@ -3,12 +3,16 @@ import NavBar from './elements/NavBar';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectTotalPrice } from '../store/buycart';
 import { addToCart, remFromCart } from '../store/buycart';
-
+import axios from 'axios';
+import { useUser } from './UserContext';
+import { useNavigate } from 'react-router-dom';
 
 const BuyPage: React.FC = () => {
     const cart = useSelector((state: any) => state.cart);
     const TotalPrice = useSelector(selectTotalPrice);
     const dispatch = useDispatch();
+    const { user } = useUser();
+    const navigate = useNavigate();
 
     const RemFromCart = (item : any) =>{
         dispatch(
@@ -17,11 +21,26 @@ const BuyPage: React.FC = () => {
                 })
         )
     }
+
     const AddToCart = (item : any) =>{
         dispatch(
             addToCart(item)
         )
+    }
 
+    const handlePurchase = () => {
+        if (user && cart.length > 0) {
+            axios.post('http://localhost:3001/purchase', {
+                email: user.email,
+                items: cart,
+                total: TotalPrice
+            }).then(response => {
+                // console.log("Purchase recorded:", response.data);
+                navigate('/orders');
+            }).catch(error => {
+                console.error("Purchase error:", error);
+            });
+        }
     }
 
     return (
@@ -37,7 +56,7 @@ const BuyPage: React.FC = () => {
                         <div className="mx-2 flex flex-col justify-center w-[15rem]">
                             <button className='button' onClick={() => RemFromCart(item)}>-</button>
                             <h1 className='text-lg font-bold'>{item.name}</h1>
-                            <p>{item.count}</p>
+                            <p>Кількість:{item.count}</p>
                             <h3 className='font-semibold text-gray-500'>${item.price}</h3>
                             <button className='button' onClick={() => AddToCart(item)}>+</button>
                         </div>
@@ -47,6 +66,7 @@ const BuyPage: React.FC = () => {
                     <h1 className='font-bitter ml-2 text-black text-4xl'>Всього</h1>
                     <h1 className='font-bitter ml-2 text-black text-4xl' >${TotalPrice}</h1>
                 </div>
+                <button className='button w-full py-2 sm:py-3 md:py-4 lg:py-5 mt-4' onClick={handlePurchase}>Купити</button>
                 </>
                 ):(
                 <h1>Кошик пустий</h1>)

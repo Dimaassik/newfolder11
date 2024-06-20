@@ -41,6 +41,27 @@ app.post('/signup', (req, res) => {
   res.status(201).json(newUser);
 });
 
+app.post('/purchase', (req, res) => {
+  const { email, items, total } = req.body;
+  const order = {
+    id: uuid.v4(),
+    email,
+    items,
+    total,
+    date: new Date().toISOString()
+  };
+
+  jsonServerRouter.db.get('orders').push(order).write();
+  res.status(201).json(order);
+});
+
+app.get('/orders', (req, res) => {
+  const { email } = req.query;
+  const orders = jsonServerRouter.db.get('orders').filter({ email }).value();
+  res.json(orders);
+});
+
+
 app.use('/', jsonServerRouter);
 
 app.listen(PORT, () => {

@@ -47,7 +47,7 @@ const CategoryPage: React.FC = () => {
                 <img className="w-[30rem] h-[10rem] object-contain mb-2" src={`/${item.img}`} alt={item.title} />
                 <h4 className='text-lg font-bold'>{item.title}</h4>
                 <p>{item.description}</p>
-                <p className='text-sm text-gray-500'>{item.price}</p>
+                <p className='text-sm text-gray-500'>${item.price}</p>
               </Link>
             </div>
           ))}

@@ -1,10 +1,232 @@
 {
   "users": [
     {
-      "firstName": "Dmytro",
-      "email": "d@gmail.com",
+      "firstName": "Pain",
+      "email": "Pain@gmail.com",
       "password": "1",
-      "userId": "c8e417c5-1b63-40dd-8962-24a431aed4f1"
+      "userId": "d3a72948-e71a-4a9f-b4f2-aca28dd9793e"
+    },
+    {
+      "firstName": "Dmitro",
+      "email": "Dimasik@gmail.com",
+      "password": "1",
+      "userId": "260832da-411d-49c1-8732-ba0b40beab35"
+    }
+  ],
+  "orders": [
+    {},
+    {
+      "id": "b4a7fa76-be11-4921-98ed-3811cb9e1aab",
+      "email": "Pain@gmail.com",
+      "items": [
+        {
+          "id": "3",
+          "name": "Asus VG249QL3A Full HD 23.8'",
+          "count": 1,
+          "price": "420",
+          "img": "assets/monitor3.png"
+        },
+        {
+          "id": "1",
+          "name": "Samsung Curved LS24C366 23.5'",
+          "count": 1,
+          "price": "350",
+          "img": "assets/monitor1.png"
+        },
+        {
+          "id": "3",
+          "name": "Apple iPhone 14 Pro 128GB",
+          "count": 1,
+          "price": "833",
+          "img": "assets/phone3.png"
+        }
+      ],
+      "total": 1603,
+      "date": "2024-06-20T18:31:11.468Z"
+    },
+    {
+      "id": "d695630b-c434-4c49-8944-74b71c2abd6d",
+      "email": "Pain@gmail.com",
+      "items": [
+        {
+          "id": "3",
+          "name": "Asus VG249QL3A Full HD 23.8'",
+          "count": 1,
+          "price": "420",
+          "img": "assets/monitor3.png"
+        },
+        {
+          "id": "1",
+          "name": "Samsung Curved LS24C366 23.5'",
+          "count": 1,
+          "price": "350",
+          "img": "assets/monitor1.png"
+        },
+        {
+          "id": "3",
+          "name": "Apple iPhone 14 Pro 128GB",
+          "count": 1,
+          "price": "833",
+          "img": "assets/phone3.png"
+        },
+        {
+          "id": "4",
+          "name": "Razer Cynosa Lite Chroma ",
+          "count": 1,
+          "price": "180",
+          "img": "assets/keyboard4.png"
+        }
+      ],
+      "total": 1783,
+      "date": "2024-06-20T18:32:31.331Z"
+    },
+    {
+      "id": "42011059-b5d9-42e1-a0a9-18ed9c141732",
+      "email": "Dimasik@gmail.com",
+      "items": [
+        {
+          "id": "2",
+          "name": "Akko SpongeBob 3098S CS Sponge Switch",
+          "count": 1,
+          "price": "160",
+          "img": "assets/keyboard2.png"
+        },
+        {
+          "id": "2",
+          "name": "Samsung Galaxy S24 Ultra 256GB",
+          "count": 1,
+          "price": "1000",
+          "img": "assets/phone2.png"
+        }
+      ],
+      "total": 1160,
+      "date": "2024-06-20T18:35:06.766Z"
+    },
+    {
+      "id": "1575c353-3e17-46be-bfde-5f83ec55924f",
+      "email": "Pain@gmail.com",
+      "items": [
+        {
+          "id": "2",
+          "name": "Audio-Technica AT2020",
+          "count": 1,
+          "price": "175",
+          "img": "assets/microphone2.png"
+        }
+      ],
+      "total": 175,
+      "date": "2024-06-20T18:39:23.915Z"
+    },
+    {
+      "id": "91b30565-c01e-482f-b83a-46c8ea49c28c",
+      "email": "Pain@gmail.com",
+      "items": [
+        {
+          "id": "2",
+          "name": "Audio-Technica AT2020",
+          "count": 1,
+          "price": "175",
+          "img": "assets/microphone2.png"
+        },
+        {
+          "id": "3",
+          "name": "Rode NT1-A",
+          "count": 1,
+          "price": "220",
+          "img": "assets/microphone3.png"
+        }
+      ],
+      "total": 395,
+      "date": "2024-06-20T18:43:06.858Z"
+    },
+    {
+      "id": "961adabe-4889-442e-aa2e-aefd601076bb",
+      "email": "Pain@gmail.com",
+      "items": [
+        {
+          "id": "2",
+          "name": "Audio-Technica AT2020",
+          "count": 1,
+          "price": "175",
+          "img": "assets/microphone2.png"
+        },
+        {
+          "id": "3",
+          "name": "Rode NT1-A",
+          "count": 5,
+          "price": "220",
+          "img": "assets/microphone3.png"
+        }
+      ],
+      "total": 1275,
+      "date": "2024-06-20T18:43:11.583Z"
+    },
+    {
+      "id": "256af7d8-abcc-46f4-bd09-a630dbbb5793",
+      "email": "Pain@gmail.com",
+      "items": [
+        {
+          "id": "2",
+          "name": "Akko SpongeBob 3098S CS Sponge Switch",
+          "count": 8,
+          "price": "160",
+          "img": "assets/keyboard2.png"
+        }
+      ],
+      "total": 1280,
+      "date": "2024-06-20T18:54:44.273Z"
+    },
+    {
+      "id": "801b5303-eb31-4d89-9e29-333bb744b697",
+      "email": "Pain@gmail.com",
+      "items": [
+        {
+          "id": "2",
+          "name": "Akko SpongeBob 3098S CS Sponge Switch",
+          "count": 5,
+          "price": "160",
+          "img": "assets/keyboard2.png"
+        }
+      ],
+      "total": 800,
+      "date": "2024-06-20T18:55:33.331Z"
+    },
+    {
+      "id": "3022b236-cb20-4509-880e-49d0daa71a02",
+      "email": "Pain@gmail.com",
+      "items": [
+        {
+          "id": "2",
+          "name": "Audio-Technica AT2020",
+          "count": 1,
+          "price": "175",
+          "img": "assets/microphone2.png"
+        }
+      ],
+      "total": 175,
+      "date": "2024-06-20T18:55:41.234Z"
+    },
+    {
+      "id": "633db053-d609-466a-887c-5c9379506d1f",
+      "email": "Pain@gmail.com",
+      "items": [
+        {
+          "id": "2",
+          "name": "Audio-Technica AT2020",
+          "count": 1,
+          "price": "175",
+          "img": "assets/microphone2.png"
+        },
+        {
+          "id": "2",
+          "name": "Akko SpongeBob 3098S CS Sponge Switch",
+          "count": 1,
+          "price": "160",
+          "img": "assets/keyboard2.png"
+        }
+      ],
+      "total": 335,
+      "date": "2024-06-20T18:56:05.995Z"
     }
   ]
 }
