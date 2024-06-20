@@ -50,6 +50,7 @@ const ProductPage: React.FC = () => {
     }, [categoryName, productName]);
 
     const onAddClick = () => {
+        console.log(categoryName)
     if (product) {
         dispatch(
             addToCart({

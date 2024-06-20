@@ -38,8 +38,8 @@ const CategoryRow: React.FC<CategoryRowProps> = ({ items, category }) => {
     const randomItems = shuffleArray(items).slice(0, 3);
 
     return (
-        <div className='mb-6'>
-            <h3 className='text-xl font-semibold mb-2'>{category}</h3>
+        <div className='m-2'>
+            <h3 className='text-xl font-semibold mb-2 capitalize'>{category}</h3>
             <div className='flex flex-wrap gap-4 justify-center'>
                 {randomItems.map((item) => (
                     <div key={item.id} className='product' onClick={() => handleProductClick(item.category, item.title)}>
