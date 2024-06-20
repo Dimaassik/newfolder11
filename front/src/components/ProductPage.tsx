@@ -75,7 +75,7 @@ const ProductPage: React.FC = () => {
               <p className="w-full md:max-w-full rounded-md bg-[#e0e0e0] p-2 mt-2">{product.fullDescription}</p>
               <div className="flex flex-col md:flex-row justify-start md:justify-between items-center mt-4">
                 <h1 className="text-3xl md:text-6xl m-1 font-semibold text-gray-500">${product.price}</h1>
-                <button className="button mt-4 md:mt-0 md:ml-4" onClick={AddToCart}>Додати до кошика</button>
+                <button className="button mt-4 md:mt-0 md:ml-4" onClick={ () => AddToCart}>Додати до кошика</button>
               </div>
             </div>
           </section>

@@ -11,6 +11,18 @@
       "email": "Dimasik@gmail.com",
       "password": "1",
       "userId": "260832da-411d-49c1-8732-ba0b40beab35"
+    },
+    {
+      "firstName": "1211",
+      "email": "d@gmail.com",
+      "password": "12",
+      "userId": "e1c76112-df33-4219-965d-1e4ffaeb06dd"
+    },
+    {
+      "firstName": "123",
+      "email": "d1@gmail.com",
+      "password": "123",
+      "userId": "e07974c4-b4f5-4f5f-bac6-ea3983203fa2"
     }
   ],
   "orders": [

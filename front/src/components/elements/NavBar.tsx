@@ -10,7 +10,6 @@ import Drawer from './Drawer';
 const NavBar: React.FC = () => {
     const navigate = useNavigate();
     const { user, logout } = useUser();
-    const cart = useSelector((state: any) => state.cart);
     const TotalCart = useSelector(selectTotalItemCount);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 

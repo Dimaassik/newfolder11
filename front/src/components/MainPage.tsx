@@ -1,6 +1,5 @@
 import React from 'react';
 import NavBar from './elements/NavBar';
-import { useNavigate } from 'react-router-dom';
 import { popularDevices } from "../data/data";
 import category from '../data/data'; 
 import CategoryRow from './elements/CategoryRow';
@@ -32,7 +31,7 @@ const MainPage: React.FC = () => {
             <section className='py-4 px-4 bg-[#f5f5f5]'>
                 <h2 className='text-2xl font-bold mb-4'>Категорії товарів</h2>
                 {category.map((item) => ( 
-                    <CategoryRow items={item.data} category={item.text}/>
+                    <CategoryRow key={item.text} items={item.data} category={item.text}/>
                 ))}
             </section>
         </div>
