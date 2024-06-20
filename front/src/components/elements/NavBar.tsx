@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useUser } from '../UserContext';
 import { category } from '../../data/data';
@@ -25,17 +25,9 @@ const NavBar: React.FC = () => {
         setIsDrawerOpen(!isDrawerOpen);
     };
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDrawerOpen(false);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    const handleCart = () => {
+      navigate('/cart');
+    };
 
     return (
         <>
@@ -51,9 +43,9 @@ const NavBar: React.FC = () => {
                     {user ? (
                         <>
                             <button className="button py-2" onClick={handleLogout}>Logout</button>
-                            <div className="relative hover:brightness-50 ">
+                            <div className="relative hover:brightness-50" onClick={handleCart}>
                                 <img src="/assets/cart.png" alt="cart" className="w-12 h-12 ml-4" />
-                                <span className="absolute top-0 right-0 text-xs text-white bg-red-500 rounded-full px-2">{cart.id.length}</span>
+                                <span className="absolute top-0 right-0 text-xs text-white bg-red-500 rounded-full px-2">{cart.length}</span>
                             </div>
                         </>
                     ) : (
@@ -75,7 +67,7 @@ const NavBar: React.FC = () => {
                         <button className="block w-full text-left px-4 py-2 text-white hover:bg-gray-400" onClick={handleLogout}>Logout</button>
                         <div className="relative hover:brightness-50 flex items-center px-4 py-2">
                             <img src="/assets/cart.png" alt="cart" className="w-8 h-8" />
-                            <span className="absolute top-0 right-0 text-xs text-white bg-red-500 rounded-full px-2">{cart.id.length}</span>
+                            <span className="absolute top-0 right-0 text-xs text-white bg-red-500 rounded-full px-2">{cart.length}</span>
                         </div>
                     </>
                 ) : (
