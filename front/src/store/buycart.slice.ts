@@ -5,15 +5,12 @@ interface AddToCartPayload {
     title: string;
 }
 
-interface BuyCartState {
-    id: string[],
-    name: string[],
+interface CartItem {
+    id: string;
+    name: string;
 }
 
-const initialState: BuyCartState = {
-    id: [],
-    name: [],
-};
+const initialState: CartItem[] = [];
 
 const buyCart = createSlice({
     name: 'cart',
@@ -21,8 +18,7 @@ const buyCart = createSlice({
     reducers: {
         addToCart: (state, action: PayloadAction<AddToCartPayload>) => {
             const { itemId, title } = action.payload;
-            state.id.push(itemId);
-            state.name.push(title);
+            state.push({ id: itemId, name: title });
         },
     }
 });
