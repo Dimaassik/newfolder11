@@ -10,10 +10,6 @@ interface Product {
     img: string;
 }
 
-const getCategoryLink = (category: string): string => {
-    return `/category/${category.toLowerCase()}`;
-};
-
 const SearchBar: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
@@ -43,6 +39,10 @@ const SearchBar: React.FC = () => {
         }
     };
 
+    const getCategoryLink = (category: string): string => {
+        return `/category/${category.toLowerCase()}`;
+    };
+
     const handleProductClick = (product: Product) => {
         const categoryLink = getCategoryLink(product.category);
         const productTitle = product.title.replace(/\s+/g, '-').toLowerCase();
@@ -53,7 +53,7 @@ const SearchBar: React.FC = () => {
 
     return (
         <div className="relative">
-            <input type="text" value={searchTerm} onChange={handleSearchChange} className='mainsearch' placeholder="Пошук"/>
+            <input type="text" id="search" value={searchTerm} onChange={handleSearchChange} className='mainsearch' placeholder="Пошук"/>
             {filteredProducts.length > 0 && (
                 <ul className="absolute top-full bg-white shadow-md border border-gray-200 rounded mt-1 w-48 md:w-64">
                     {filteredProducts.map(product => (
