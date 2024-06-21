@@ -23,6 +23,12 @@
       "email": "d1@gmail.com",
       "password": "123",
       "userId": "e07974c4-b4f5-4f5f-bac6-ea3983203fa2"
+    },
+    {
+      "firstName": "12",
+      "email": "d12@gmail.com",
+      "password": "123",
+      "userId": "d78e6bfe-0a3b-45f3-b625-c4670adb890b"
     }
   ],
   "orders": [
@@ -239,35 +245,6 @@
       ],
       "total": 335,
       "date": "2024-06-20T18:56:05.995Z"
-    },
-    {
-      "id": "5d64f13e-3ed1-4ece-bf8f-b3c581f95bc6",
-      "email": "Pain@gmail.com",
-      "items": [
-        {
-          "id": "3",
-          "name": "Asus VG249QL3A Full HD 23.8'",
-          "count": 3,
-          "price": "420",
-          "img": "assets/monitor3.png"
-        },
-        {
-          "id": "4",
-          "name": "Acer EK251YEBI Full HD 24.5'",
-          "count": 3,
-          "price": "220",
-          "img": "assets/monitor4.png"
-        },
-        {
-          "id": "2",
-          "name": "MSI Optix G27CQ4 QHD VA Curved 27'",
-          "count": 3,
-          "price": "550",
-          "img": "assets/monitor2.png"
-        }
-      ],
-      "total": 3570,
-      "date": "2024-06-21T07:45:00.583Z"
     }
   ]
 }

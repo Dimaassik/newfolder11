@@ -1,6 +1,5 @@
 import React from 'react';
 import NavBar from './elements/NavBar';
-import { useNavigate } from 'react-router-dom';
 import { popularDevices } from "../data/data";
 import category from '../data/data'; 
 import CategoryRow from './elements/CategoryRow';

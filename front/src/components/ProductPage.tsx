@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { mice, keyboards, monitors, headphones, microphones, phones } from '../data/data';
@@ -30,14 +30,14 @@ const ProductPage: React.FC = () => {
     const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
     const categoryName = category ? category.toLowerCase() : '';
 
-    const productCategories: { [key: string]: Product[] } = {
+    const productCategories : any = useMemo(() => ({
         keyboards,
         mice,
         monitors,
         headphones,
         microphones,
         phones,
-    };
+      }), []);
 
     useEffect(() => {
         if (categoryName && productName) {
@@ -46,7 +46,7 @@ const ProductPage: React.FC = () => {
             setProduct(foundProduct);
             setRelatedProducts(products);
         }
-    }, [categoryName, productName]);
+    }, [categoryName, productName, productCategories]);
 
     const AddToCart = () => {
     if (product) {
