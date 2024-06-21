@@ -1,8 +1,7 @@
 import React from 'react';
 import NavBar from './elements/NavBar';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectTotalPrice, clearCart } from '../store/buycart';
-import { addToCart, remFromCart } from '../store/buycart';
+import { addToCart, remFromCart, clearCart, selectTotalPrice } from '../store/buycart';
 import axios from 'axios';
 import { useUser } from './UserContext';
 import { useNavigate } from 'react-router-dom';
