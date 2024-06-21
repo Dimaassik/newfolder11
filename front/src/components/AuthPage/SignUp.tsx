@@ -19,21 +19,32 @@ const SignUpPage: React.FC = () => {
 
   const handleSignUp = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    if (!firstName || !email || !password || (password !== confirmPassword)) {
-      const inputs = document.querySelectorAll<HTMLInputElement>('input');
-      const search = document.getElementById('search');
-      inputs.forEach(input => {
-          input.className = 'authInputEr';
-      });
-      if(search) search.className='mainsearch'
-      return;
+    const { firstName, email, password, confirmPassword } = formData;
+    let hasError = false;
+    const newErrors = {
+      firstName: false,
+      email: false,
+      password: false,
+      confirmPassword: false
+    };
+    if (!firstName) {
+      newErrors.firstName = true;
+      hasError = true;
     }
     if (!validateEmail(email)) {
-      const mail = document.getElementById('mail');
-      if(mail) mail.className = 'authInputEr';
-      return;
+      newErrors.email = true;
+      hasError = true;
     }
-    
+    if (password !== confirmPassword || !password) {
+      newErrors.password = true;
+      newErrors.confirmPassword = true;
+      hasError = true;
+    }
+
+    setErrors(newErrors);
+
+    if (hasError) return;
+
     axios.post('http://localhost:3001/signup', { firstName, email, password })
       .then(result => {
         console.log(result.data);
