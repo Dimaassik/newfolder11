@@ -51,7 +51,7 @@ const BuyPage: React.FC = () => {
                     {cart.length > 0 ? (
                 <>
                     {cart.map((item : any) => (
-                    <div className='flex justify-between border-2 w-full border-gray-600 rounded-xl bg-gray-100 py-6 px-4 shadow-xl' >
+                    <div key={item.id} className='flex justify-between border-2 w-full border-gray-600 rounded-xl bg-gray-100 py-6 px-4 shadow-xl' >
                         <img className='w-[15rem] h-[15rem] object-contain' src={item.img} alt='product' />
                         <div className="mx-2 flex flex-col justify-center w-[15rem]">
                             <button className='button' onClick={() => RemFromCart(item)}>-</button>
@@ -69,7 +69,7 @@ const BuyPage: React.FC = () => {
                 <button className='button w-full py-2 sm:py-3 md:py-4 lg:py-5 mt-4' onClick={handlePurchase}>Купити</button>
                 </>
                 ):(
-                <h1>Кошик пустий</h1>)
+                <h1>Кошик пустий :(</h1>)
                 }
                 </div>
             </section>

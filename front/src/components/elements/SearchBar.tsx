@@ -10,6 +10,10 @@ interface Product {
     img: string;
 }
 
+const getCategoryLink = (category: string): string => {
+    return `/category/${category.toLowerCase()}`;
+};
+
 const SearchBar: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
@@ -37,10 +41,6 @@ const SearchBar: React.FC = () => {
         } else {
             setFilteredProducts([]);
         }
-    };
-
-    const getCategoryLink = (category: string): string => {
-        return `/category/${category.toLowerCase()}`;
     };
 
     const handleProductClick = (product: Product) => {

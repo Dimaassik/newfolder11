@@ -15,6 +15,11 @@ interface CategoryRowProps {
     category: string;
 }
 
+
+const getCategoryLink = (category: string): string => {
+    return `/category/${category.toLowerCase()}`;
+};
+
 const CategoryRow: React.FC<CategoryRowProps> = ({ items, category }) => {
 
     const navigate = useNavigate();
@@ -28,9 +33,6 @@ const CategoryRow: React.FC<CategoryRowProps> = ({ items, category }) => {
         return shuffled;
     };
 
-    const getCategoryLink = (category: string): string => {
-        return `/category/${category.toLowerCase()}`;
-    };
     const handleProductClick = (category: string, productTitle: string) => {
         navigate(`${getCategoryLink(category)}/${productTitle.replace(/\s+/g, '-').toLowerCase()}`);
     };

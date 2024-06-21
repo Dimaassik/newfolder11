@@ -22,7 +22,7 @@ const MainPage: React.FC = () => {
                 </div>
                 <div className='flex flex-col gap-2 '>
                     {popularDevices.map((item) => (
-                        <div className='flex items-center rounded-md bg-[#a8a8a8] p-2 cursor-pointer hover:brightness-75' onMouseEnter={ () => handleMainImg(item.img)}>
+                        <div key={item.text} className='flex items-center rounded-md bg-[#a8a8a8] p-2 cursor-pointer hover:brightness-75' onMouseEnter={ () => handleMainImg(item.img)}>
                             <img className="p-1 w-24 h-16"src={item.img} alt={item.text} />
                             <p className="p-2">{item.text}</p>
                         </div>

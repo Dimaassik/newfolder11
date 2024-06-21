@@ -4,17 +4,37 @@ import NavBar from '../elements/NavBar';
 import axios from 'axios';
 import { useUser } from '../UserContext';
 
+const validateEmail = (email: string) => {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
+};
+
 const SignUpPage: React.FC = () => {
-  const [firstName, setFirstName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const [confirmPassword, setConfirmPassword] = useState<string>('');
+  const [formData, setFormData] = useState({
+    firstName: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  });
+  const [errors, setErrors] = useState({
+    firstName: false,
+    email: false,
+    password: false,
+    confirmPassword: false
+  });
   const navigate = useNavigate();
   const { login } = useUser();
 
-  const validateEmail = (email: string): boolean => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+    setErrors({
+      ...errors,
+      [name]: false
+    });
   };
 
   const handleSignUp = (e: React.FormEvent<HTMLButtonElement>) => {
@@ -27,14 +47,17 @@ const SignUpPage: React.FC = () => {
       password: false,
       confirmPassword: false
     };
+
     if (!firstName) {
       newErrors.firstName = true;
       hasError = true;
     }
+
     if (!validateEmail(email)) {
       newErrors.email = true;
       hasError = true;
     }
+
     if (password !== confirmPassword || !password) {
       newErrors.password = true;
       newErrors.confirmPassword = true;
@@ -67,16 +90,14 @@ const SignUpPage: React.FC = () => {
       <section className="flex justify-center mt-2 sm:mt-4 md:mt-6 lg:mt-8">
         <div className="authDiv bg-[#e0e0e0] p-4 sm:p-6 md:p-8 lg:p-10 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3">
           <h1 className="authText">Ім'я</h1>
-          <input type="text" className="authInput" placeholder="Ім'я" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
+          <input type="text" className={`authInput ${errors.firstName ? 'authInputEr' : ''}`} placeholder="Ім'я" name="firstName" value={formData.firstName} onChange={handleInputChange}/>
           <h1 className="authText">E-mail</h1>
-          <input id="mail" type="email" className="authInput" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)}/>
+          <input id="mail" type="email" className={`authInput ${errors.email ? 'authInputEr' : ''}`} placeholder="E-mail" name="email" value={formData.email} onChange={handleInputChange}/>
           <h1 className="authText">Пароль</h1>
-          <input type="password" className="authInput " placeholder="Пароль" value={password} onChange={(e) => setPassword(e.target.value)}/>
+          <input type="password" className={`authInput ${errors.password ? 'authInputEr' : ''}`} placeholder="Пароль" name="password" value={formData.password} onChange={handleInputChange}/>
           <h1 className="authText">Повторіть пароль</h1>
-          <input type="password" className="authInput" placeholder="Повторіть пароль" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
-          <button className="button w-full py-2 sm:py-3 md:py-4 lg:py-5" onClick={handleSignUp}>
-            Зареєструватися
-          </button>
+          <input type="password" className={`authInput ${errors.confirmPassword ? 'authInputEr' : ''}`} placeholder="Повторіть пароль"name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange}/>
+          <button className="button w-full py-2 sm:py-3 md:py-4 lg:py-5" onClick={handleSignUp}>Зареєструватися</button>
           <Link to="/login" className="button w-full text-center mt-2 py-2 sm:py-3 md:py-4 lg:py-5">Маю аккаунт</Link>
         </div>
       </section>
