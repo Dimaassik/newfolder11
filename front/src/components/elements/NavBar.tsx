@@ -3,12 +3,14 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useUser } from '../UserContext';
 import { category } from '../../data/data';
 import SearchBar from './SearchBar';
-import { useSelector } from 'react-redux';
-import { selectTotalItemCount } from '../../store/buycart';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectTotalItemCount,clearCart } from '../../store/buycart';
 import Drawer from './Drawer';
+
 
 const NavBar: React.FC = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const { user, logout } = useUser();
     const TotalCart = useSelector(selectTotalItemCount);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -18,6 +20,7 @@ const NavBar: React.FC = () => {
     };
 
     const handleLogout = () => {
+        dispatch(clearCart());
         logout();
         navigate('/');
     };

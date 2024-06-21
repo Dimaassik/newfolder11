@@ -35,6 +35,7 @@ const BuyPage: React.FC = () => {
                 total: TotalPrice
             }).then(response => {
                 navigate('/orders');
+                dispatch(clearCart());
             }).catch(error => {
                 console.error("Purchase error:", error);
             });
