@@ -25,13 +25,12 @@ const buyCart = createSlice({
     initialState,
     reducers: {
         addToCart: (state, action: PayloadAction<AddToCartPayload>) => {
-            const { id, name, price, img} = action.payload;
-            const existingItem = state.find((item) => item.name === name)
+            const { id, name, price, img } = action.payload;
+            const existingItem = state.find((item) => item.name === name);
             if (existingItem) {
                 existingItem.count++;
-            }else
-            {
-                state.push({ id, name, count: 1, price, img});
+            } else {
+                state.push({ id, name, count: 1, price, img });
             }
         },
         remFromCart: (state, action: PayloadAction<RemFromCartPayload>) => {
@@ -41,24 +40,20 @@ const buyCart = createSlice({
                 if (existingItem.count > 1) {
                     existingItem.count--;
                 } else {
-                    return state.filter((item) => item.name !== name);
+                    state.splice(state.indexOf(existingItem), 1);
                 }
             }
-            return state;
         }
-        
     },
-     selectors:{
-         selectTotalItemCount :(state) => (
+    selectors: {
+        selectTotalItemCount: (state: CartItem[]) => (
             state.reduce((total, item) => total + item.count, 0)
-         ),
-         selectTotalPrice: (state) => (
+        ),
+        selectTotalPrice: (state: CartItem[]) => (
             state.reduce((total, item) => total + parseFloat(item.price) * item.count, 0)
-
         )
-     }
+    }
 });
-
 
 export const { addToCart, remFromCart } = buyCart.actions;
 export const { selectTotalItemCount, selectTotalPrice } = buyCart.selectors;
