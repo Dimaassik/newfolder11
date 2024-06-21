@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './elements/NavBar';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectTotalPrice } from '../store/buycart';
+import { selectTotalPrice, clearCart } from '../store/buycart';
 import { addToCart, remFromCart } from '../store/buycart';
 import axios from 'axios';
 import { useUser } from './UserContext';
@@ -19,13 +19,13 @@ const BuyPage: React.FC = () => {
             remFromCart({
                 name: item.name,
                 })
-        )
+        );
     }
 
     const AddToCart = (item : any) =>{
         dispatch(
             addToCart(item)
-        )
+        );
     }
 
     const handlePurchase = () => {
@@ -35,12 +35,15 @@ const BuyPage: React.FC = () => {
                 items: cart,
                 total: TotalPrice
             }).then(response => {
-                // console.log("Purchase recorded:", response.data);
                 navigate('/orders');
             }).catch(error => {
                 console.error("Purchase error:", error);
             });
         }
+    }
+
+    const handleClearCart = () => {
+        dispatch(clearCart());
     }
 
     return (
@@ -66,7 +69,8 @@ const BuyPage: React.FC = () => {
                     <h1 className='font-bitter ml-2 text-black text-4xl'>Всього</h1>
                     <h1 className='font-bitter ml-2 text-black text-4xl' >${TotalPrice}</h1>
                 </div>
-                <button className='button w-full py-2 sm:py-3 md:py-4 lg:py-5 mt-4' onClick={handlePurchase}>Купити</button>
+                <button className='button-cart' onClick={handlePurchase}>Купити</button>
+                <button className='button-cart' onClick={handleClearCart}>Очистити кошик</button>
                 </>
                 ):(
                 <h1>Кошик пустий :(</h1>)

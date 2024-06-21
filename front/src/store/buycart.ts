@@ -43,7 +43,7 @@ const buyCart = createSlice({
                     state.splice(state.indexOf(existingItem), 1);
                 }
             }
-        }
+        },clearCart: () => initialState
     },
     selectors: {
         selectTotalItemCount: (state: CartItem[]) => (
@@ -55,6 +55,6 @@ const buyCart = createSlice({
     }
 });
 
-export const { addToCart, remFromCart } = buyCart.actions;
+export const { addToCart, remFromCart, clearCart } = buyCart.actions;
 export const { selectTotalItemCount, selectTotalPrice } = buyCart.selectors;
 export default buyCart.reducer;

@@ -47,7 +47,7 @@ const headphones = [
       id: 4,
       category: "Headphones",
       title: "Logitech G435",
-      description: "Gaming headset engineered with advanced audio drivers and clear communication for competitive gaming.",
+      description: "Gaming headset with advanced audio drivers and clear communication for competitive gaming.",
       fullDescription:`
       Призначення:ігрові
       Конструкція:накладні, закриті
